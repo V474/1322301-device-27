@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Владислав Василюк](https://up.htmlacademy.ru/htmlcss/27/user/1322301).
-* Наставник: `Неизвестно`.
+- Студент: [Владислав Василюк](https://up.htmlacademy.ru/htmlcss/27/user/1322301).
+- Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/nikita_rogatnev).
 
 ---
 
