@@ -1,0 +1,208 @@
+
+@font-face {
+  font-family: 'Gilroy', 'Open Sans', sans-serif;
+  src: url('fonts/gilroyextrabold.woff');
+  src: url('fonts/gilroyextrabold.woff2');
+  src: url('fonts/gilroylight.woff');
+  src: url('fonts/gilroylight.woff2');
+  src: url('fonts/opensans.woff');
+  src: url('fonts/opensans.woff2');
+  src: url('fonts/opensanslight.woff');
+  src: url('fonts/opensanslight.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 40px;
+  padding: 0;
+  font-family: 'Gilroy', 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  display: inline-block; 
+}
+
+.nav {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #f0c52e;
+}
+
+.nav a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.nav a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Слайдер */
+
+.slide-text h2 {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  color: black;
+}
+
+.slide-text dt {
+  font-family: Gilroy;
+  font-size: 36px;
+  font-weight: 300;
+  color: black;
+}
+
+.slide-text dl {
+  font-size: 13px;
+}
+
+/* Каталог товаров плитками */
+
+.catalog {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
+}
+
+/* Услуги магазина */
+
+.services {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
+}
+
+.services h3 {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  color: black;
+}
+
+.services p {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  color: #464646;
+}
+
+/* О магазине */
+
+.info h2 {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  color: black;
+}
+
+.info p {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  columns: #464646;
+}
+
+.info li {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 2.5;
+  color: black;
+  list-style-type: circle;
+}
+
+/* Контакты */
+
+.contacts h2 {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  color: black;
+}
+
+.contacts p {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  columns: #464646;
+}
+
+.contacts a {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
+ 
+}
+
+/* Footer */
+
+.footer {
+  background-color: #464646;
+  color: white;
+}
+
+.services-footer a {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+}
+
+.services-footer {
+  text-align: center;
+}
+
+.address p {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.social li {
+  text-align: center;
+}
+
+.nav-footer a {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-footer {
+  text-align: right;
+}
+
+.tel a {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+}
+
+.tel {
+  text-align: right;
+}
+
+.html-academy {
+  text-align: right;
+}
