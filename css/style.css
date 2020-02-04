@@ -1,36 +1,45 @@
 
 @font-face {
-  font-family: 'Gilroy', 'Open Sans', sans-serif;
-  src: url('fonts/gilroyextrabold.woff');
-  src: url('fonts/gilroyextrabold.woff2');
-  src: url('fonts/gilroylight.woff');
-  src: url('fonts/gilroylight.woff2');
-  src: url('fonts/opensans.woff');
-  src: url('fonts/opensans.woff2');
-  src: url('fonts/opensanslight.woff');
-  src: url('fonts/opensanslight.woff2');
+  font-family: 'Gilroy', sans-serif;
+  src: url('fonts/gilroyextrabold.woff2'), format('woff2'),
+       url('fonts/gilroyextrabold.woff'), format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy', sans-serif;
+  src: url('fonts/gilroylight.woff2'), format('woff2'),
+       url('fonts/gilroylight.woff'), format('woff');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans', sans-serif;
+  src: url('fonts/opensans.woff2'), format('woff2'),
+       url('fonts/opensans.woff'), format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans', sans-serif;
+  src: url('fonts/opensanslight.woff2'), format('woff2'),
+       url('fonts/opensanslight.woff'), format('woff');
+  font-weight: lighter;
   font-style: normal;
 }
 
 body {
   margin: 40px;
   padding: 0;
-  font-family: 'Gilroy', 'Open Sans', sans-serif;
+  font-family: 'Gilroy', 'OpenSans', sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
   color: #464646;
   background-color: white;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-li {
-  list-style: none;
 }
 
 .logo {
@@ -43,6 +52,15 @@ li {
   background-color: #f0c52e;
 }
 
+.nav li {
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
 .nav a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -52,6 +70,11 @@ li {
 }
 
 /* Слайдер */
+
+.slider a {
+  text-decoration: none;
+  color: black;
+}
 
 .slide-text h2 {
   font-family: Gilroy;
@@ -80,6 +103,14 @@ li {
   color: black;
 }
 
+.catalog li {
+  list-style: none;
+}
+
+.catalog a {
+  color: black;
+}
+
 /* Услуги магазина */
 
 .services {
@@ -96,11 +127,29 @@ li {
   color: black;
 }
 
+.services li {
+  list-style: none;
+}
+
+.services a {
+  color: black;
+}
+
 .services p {
   font-family: OpenSans;
   font-size: 15px;
   font-weight: 300;
   color: #464646;
+}
+
+/* Нащи партнёры */
+
+.partners li {
+  list-style: none;
+}
+
+.partners a {
+  color: black;
 }
 
 /* О магазине */
@@ -126,6 +175,11 @@ li {
   line-height: 2.5;
   color: black;
   list-style-type: circle;
+  list-style: none
+}
+
+.info a {
+  color: black;
 }
 
 /* Контакты */
@@ -167,6 +221,10 @@ li {
   text-transform: uppercase;
 }
 
+.services-footer li {
+  list-style: none;
+}
+
 .services-footer {
   text-align: center;
 }
@@ -179,6 +237,11 @@ li {
 
 .social li {
   text-align: center;
+  list-style: none
+}
+
+.social a {
+  color: white;
 }
 
 .nav-footer a {
@@ -190,6 +253,10 @@ li {
 
 .nav-footer {
   text-align: right;
+}
+
+.nav-footer li {
+  list-style: none;
 }
 
 .tel a {
