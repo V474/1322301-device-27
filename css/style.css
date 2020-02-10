@@ -32,24 +32,28 @@
 }
 
 body {
-  margin: 40px;
-  padding: 0;
+  width: 100%;
+  max-width: 1160px;
+  padding: 0 auto;
+  margin: 0 auto;
   font-family: 'Gilroy', 'OpenSans', sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  color: #464646;
-  background-color: white;
+  color: rgb(70, 70, 70);
+  background-color: rgb(255.255.255);
 }
 
-.logo {
-  display: inline-block; 
-}
+
 
 .nav {
+  height: 300px;
+  margin-top: 0px;
+  padding-top: 0px;
+  width: 1040px;
   font-size: 16px;
   line-height: 20px;
-  background-color: #f0c52e;
+  background-color: rgb(240, 197, 46);
 }
 
 .nav li {
@@ -58,7 +62,7 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .nav a:hover {
@@ -69,30 +73,145 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.nav input  {
+  font-family: OpenSans;
+}
+
+/* Навигация для пользователя */
+
+.nav-user {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 53px;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.nav-user li:first-child {
+  background: url("/img/search.svg") no-repeat left center;
+  padding:  3px 0 0 18px;
+  flex-basis: 420px;
+}
+  
+.nav-user li:nth-child(2) {
+  background: url("/img/user.svg") no-repeat left center;
+  padding:  3px 0 0 18px;
+  flex-basis: 238px;
+}
+
+.nav-user li:nth-child(3) {
+  background: url("/img/compare.svg") no-repeat left center;
+  padding:  3px 0 0 18px;
+}
+
+.nav-user li:nth-child(4) {
+  background: url("/img/cart.svg") no-repeat left center;
+  padding:  3px 0 0 18px;
+}
+
+/* Навигация по каталогу */
+
+.nav-catalog {
+  display: flex;
+  padding-right: 60px;
+  padding-left: 60px;
+  justify-content: space-between;
+  flex-basis: auto;
+}
+
+.nav-catalog li {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.nav-user input {
+  border: 0px rgb(240, 197, 46);
+}
+
+.nav-catalog li:first-child {
+  width: 214px;
+}
+
+.nav-catalog li:nth-last-child(2) {
+  flex-basis: 114px;
+}
+
+/* Подменю каталога */
+
+.nav-subcatalog {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.nav-subcatalog ul {
+  width: 440px;
+}
+
+.nav-subcatalog li {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0em;
+}
+
 /* Слайдер */
+
+.slide {
+  display: flex;
+  justify-content: space-around;
+  max-width: auto;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 180px;
+}
+
+.slide-image img:first-of-type {
+  padding-right: 125px;
+  padding-left: 30px;
+}
 
 .slider a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .slide-text h2 {
   font-family: Gilroy;
   font-size: 47px;
   font-weight: 800;
-  color: black;
+  color: rgb(0, 0, 0);
+  line-height: 56px;
 }
 
 .slide-text dt {
   font-family: Gilroy;
   font-size: 36px;
   font-weight: 300;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .slide-text dl {
   font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.slide-text dt {
+  display: flex;
+  width: 33%;
+}
+
+.slide-text dd {
+  margin-left: auto;
+  width: 33%;
+}
+
 
 /* Каталог товаров плитками */
 
@@ -100,7 +219,7 @@ body {
   font-family: Gilroy;
   font-size: 18px;
   font-weight: 800;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .catalog li {
@@ -108,7 +227,7 @@ body {
 }
 
 .catalog a {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 /* Услуги магазина */
@@ -117,14 +236,14 @@ body {
   font-family: Gilroy;
   font-size: 18px;
   font-weight: 800;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .services h3 {
   font-family: Gilroy;
   font-size: 47px;
   font-weight: 800;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .services li {
@@ -132,14 +251,14 @@ body {
 }
 
 .services a {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .services p {
   font-family: OpenSans;
   font-size: 15px;
   font-weight: 300;
-  color: #464646;
+  color: rgb(70, 70, 70);
 }
 
 /* Нащи партнёры */
@@ -149,7 +268,7 @@ body {
 }
 
 .partners a {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 /* О магазине */
@@ -158,14 +277,14 @@ body {
   font-family: Gilroy;
   font-size: 47px;
   font-weight: 800;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .info p {
   font-family: OpenSans;
   font-size: 15px;
   font-weight: 300;
-  columns: #464646;
+  columns: rgb(70, 70, 70);
 }
 
 .info li {
@@ -173,13 +292,13 @@ body {
   font-size: 16px;
   font-weight: 800;
   line-height: 2.5;
-  color: black;
+  color: rgb(0, 0, 0);
   list-style-type: circle;
   list-style: none
 }
 
 .info a {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 /* Контакты */
@@ -188,36 +307,36 @@ body {
   font-family: Gilroy;
   font-size: 47px;
   font-weight: 800;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .contacts p {
   font-family: OpenSans;
   font-size: 15px;
   font-weight: 300;
-  columns: #464646;
+  columns: rgb(70, 70, 70);
 }
 
 .contacts a {
   font-family: Gilroy;
   font-size: 18px;
   font-weight: 800;
-  color: black;
+  color: rgb(0, 0, 0);
  
 }
 
 /* Footer */
 
 .footer {
-  background-color: #464646;
-  color: white;
+  background-color: rgb(70, 70, 70);
+  color: rgb(255.255.255);
 }
 
 .services-footer a {
   font-family: Gilroy;
   font-size: 18px;
   font-weight: 800;
-  color: white;
+  color: rgb(255.255.255);
   text-transform: uppercase;
 }
 
@@ -241,7 +360,7 @@ body {
 }
 
 .social a {
-  color: white;
+  color: rgb(255.255.255);
 }
 
 .nav-footer a {
@@ -263,7 +382,7 @@ body {
   font-family: OpenSans;
   font-size: 15px;
   font-weight: 300;
-  color: white;
+  color: rgb(255.255.255);
 }
 
 .tel {
@@ -272,4 +391,30 @@ body {
 
 .html-academy {
   text-align: right;
+}
+
+.user label  {
+  font-family: Gilroy;
+  font-size: 18px;
+}
+
+.user input  {
+  font-family: OpenSans;
+  font-size: 14px;
+}
+
+.user button {
+  width: 200px;
+  height: 8px;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 4px;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(240, 197, 46);
+  text-transform: uppercase;
 }
