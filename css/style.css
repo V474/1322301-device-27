@@ -1,6 +1,6 @@
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: Gilroy;
   src: url('fonts/gilroyextrabold.woff2'), format('woff2'),
        url('fonts/gilroyextrabold.woff'), format('woff');
   font-weight: 800;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: Gilroy;
   src: url('fonts/gilroylight.woff2'), format('woff2'),
        url('fonts/gilroylight.woff'), format('woff');
   font-weight: 300;
@@ -16,7 +16,7 @@
 }
 
 @font-face {
-  font-family: 'OpenSans';
+  font-family: OpenSans;
   src: url('fonts/opensans.woff2'), format('woff2'),
        url('fonts/opensans.woff'), format('woff');
   font-weight: 400;
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-  font-family: 'OpenSans';
+  font-family: OpenSans;
   src: url('fonts/opensanslight.woff2'), format('woff2'),
        url('fonts/opensanslight.woff'), format('woff');
   font-weight: 300;
@@ -32,28 +32,53 @@
 }
 
 body {
-  width: 100%;
-  max-width: 1160px;
-  padding: 0 auto;
-  margin: 0 auto;
-  font-family: 'Gilroy', 'OpenSans', sans-serif;
+  margin: 0px auto;
+  padding-top: 20px;
+  font-family: Gilroy, OpenSans, sans-serif;
   font-size: 15px;
-  line-height: 30px;
   font-weight: 300;
   color: rgb(70, 70, 70);
   background-color: rgb(255.255.255);
+  width: 1160px;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 
+.logo {
+  padding-left: 60px;
+  margin-bottom: -36px;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
 
 .nav {
+  padding-left: 60px;
+  padding-right: 60px;
   height: 300px;
-  margin-top: 0px;
-  padding-top: 0px;
-  width: 1040px;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 15px;
+  font-weight: 300;
   background-color: rgb(240, 197, 46);
+
+}
+
+.nav li:hover {
+  opacity: 0.6;
+}
+
+.nav li:active {
+  opacity: 0.3;
 }
 
 .nav li {
@@ -82,41 +107,38 @@ body {
 .nav-user {
   display: flex;
   justify-content: space-between;
-  padding-top: 53px;
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-top: 50px;
 }
 
-.nav-user li:first-child {
+.nav-user li:first-child::before {
+  content: "";
   background: url("/img/search.svg") no-repeat left center;
-  padding:  3px 0 0 18px;
-  flex-basis: 420px;
+  padding: 10px 0 10px 20px;
 }
   
-.nav-user li:nth-child(2) {
+.nav-user li:nth-of-type(2)::before {
+  content: "";
   background: url("/img/user.svg") no-repeat left center;
-  padding:  3px 0 0 18px;
-  flex-basis: 238px;
+  padding: 10px 0 10px 20px;
 }
 
-.nav-user li:nth-child(3) {
+.nav-user li:nth-of-type(3)::before {
+  content: "";
   background: url("/img/compare.svg") no-repeat left center;
-  padding:  3px 0 0 18px;
+  padding: 10px 0 10px 20px;
 }
 
-.nav-user li:nth-child(4) {
+.nav-user li:nth-of-type(4)::before {
+  content: "";
   background: url("/img/cart.svg") no-repeat left center;
-  padding:  3px 0 0 18px;
+  padding: 10px 0 10px 20px;
 }
 
 /* Навигация по каталогу */
 
 .nav-catalog {
   display: flex;
-  padding-right: 60px;
-  padding-left: 60px;
   justify-content: space-between;
-  flex-basis: auto;
 }
 
 .nav-catalog li {
@@ -129,14 +151,8 @@ body {
 
 .nav-user input {
   border: 0px rgb(240, 197, 46);
-}
-
-.nav-catalog li:first-child {
-  width: 214px;
-}
-
-.nav-catalog li:nth-last-child(2) {
-  flex-basis: 114px;
+  width: 108px;
+  height: 15px;
 }
 
 /* Подменю каталога */
@@ -144,12 +160,7 @@ body {
 .nav-subcatalog {
   display: flex;
   justify-content: space-between;
-  padding-right: 60px;
-  padding-left: 60px;
-}
-
-.nav-subcatalog ul {
-  width: 440px;
+  padding-top: 40px;
 }
 
 .nav-subcatalog li {
@@ -162,11 +173,13 @@ body {
 
 /* Слайдер */
 
+
+
 .slide {
   display: flex;
   justify-content: space-around;
   max-width: auto;
-  margin: 0 auto;
+  margin: -111px auto;
   padding-left: 60px;
   padding-right: 180px;
 }
@@ -176,40 +189,70 @@ body {
   padding-left: 30px;
 }
 
-.slider a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-
 .slide-text h2 {
   font-family: Gilroy;
   font-size: 47px;
   font-weight: 800;
   color: rgb(0, 0, 0);
   line-height: 56px;
+  display: inline-block;
+  padding-top: 18px;
+  width: 394px;
+  margin-bottom: 31px;
 }
 
-.slide-text dt {
+.slider a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.slide p {
+  padding-bottom: 50px;
+}
+
+.slide .back-yellow {
+  width: 220px;
+  height: 8px;
+  padding-top: 1px;
+  padding-bottom: 0px;
+  margin-bottom: 76px;
+}
+
+.slide .back-yellow:hover {
+  width: 220px;
+  height: 20px;
+  padding-top: 17px;
+  margin-bottom: 76px;
+}
+
+.slide .back-yellow:active {
+  width: 220px;
+  height: 20px;
+  padding-top: 17px;
+  margin-bottom: 76px;
+}
+
+.slide a:active {
+  opacity: 0.3;
+}
+
+.slide-text th {
   font-family: Gilroy;
   font-size: 36px;
   font-weight: 300;
-  color: rgb(0, 0, 0);
+  padding-bottom: 20px;
+  text-align: left;
 }
 
-.slide-text dl {
+.slide-text td {
   font-size: 13px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
-.slide-text dt {
-  display: flex;
-  width: 33%;
-}
-
-.slide-text dd {
-  margin-left: auto;
-  width: 33%;
+.feature {
+  width: 425px;
 }
 
 
@@ -220,23 +263,72 @@ body {
   font-size: 18px;
   font-weight: 800;
   color: rgb(0, 0, 0);
+  margin-top: 217px;
+}
+
+.catalog a {
+  text-decoration: none;
 }
 
 .catalog li {
   list-style: none;
+  display: inline-block;
+  min-width: 160px;
+  max-width: 160px;
+  margin-left: -40px;
+  margin-right: 76px;
+}
+
+.catalog li:last-child {
+  margin-right: -40px;
+}
+
+.image-catalog {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-catalog  div{
+  background-color: rgb(240, 197, 46);
+  width: 160px;
+  height: 160px;
+  opacity: 0.5;
+}
+
+.image-catalog  div:hover {
+  opacity: 1;
+}
+
+.catalog a:hover {
+  opacity: 0.3;
+}
+
+.image-catalog div {
+  display:flex;
+  align-items:center;
+  justify-content: center;
 }
 
 .catalog a {
   color: rgb(0, 0, 0);
 }
 
+.image-item img:active {
+  opacity: 0.3;
+}
+
 /* Услуги магазина */
 
 .services {
+  display: flex;
+  margin-top: 180px;
+  height: 319px;
+  width: 100%;
   font-family: Gilroy;
   font-size: 18px;
   font-weight: 800;
   color: rgb(0, 0, 0);
+  background-color: rgb(229, 229, 229);
 }
 
 .services h3 {
@@ -248,10 +340,26 @@ body {
 
 .services li {
   list-style: none;
+  margin: 0 auto;
+}
+
+.services li:first-child {
+  padding-bottom: 53px;
+}
+
+.services li:nth-child(2) {
+  padding-bottom: 53px;
 }
 
 .services a {
   color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.services .back-yellow {
+  width: 160px;
+  font-weight: 800;
+  line-height: 8px;
 }
 
 .services p {
@@ -259,12 +367,51 @@ body {
   font-size: 15px;
   font-weight: 300;
   color: rgb(70, 70, 70);
+  max-width: 426px;
+}
+
+.services-menu {
+  box-sizing: border-box;
+  height: 319px;
+  margin-left: -40px;
+  padding-top: 80px;
+  margin-top: -100px;
+  border-right: 7px solid rgb(0, 0, 0);
+  padding-right: 117px;
+}
+
+.services-description {
+  margin-top: -80px;
+  padding-left: 116px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.services-description img {
+  padding-top: 63px;
+  padding-left: 132px;
 }
 
 /* Нащи партнёры */
 
+.partners {
+  margin-top: 94px;
+  margin-bottom: 152px;
+}
+
+.partners ul {
+  display: flex;
+  justify-content: space-between;
+}
+
 .partners li {
   list-style: none;
+  opacity: 20%;
+}
+
+.partners li:hover{
+  opacity: 1;
 }
 
 .partners a {
@@ -273,11 +420,18 @@ body {
 
 /* О магазине */
 
+.info-contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
 .info h2 {
   font-family: Gilroy;
   font-size: 47px;
   font-weight: 800;
   color: rgb(0, 0, 0);
+  margin: 0 auto;
+  padding-bottom: 59px;
 }
 
 .info p {
@@ -285,6 +439,14 @@ body {
   font-size: 15px;
   font-weight: 300;
   columns: rgb(70, 70, 70);
+  width: 462px;
+  display: inline-block;
+  margin: 0 auto;
+  padding-bottom: 44px;
+}
+
+.info ul {
+  padding-top: 15px;
 }
 
 .info li {
@@ -297,8 +459,25 @@ body {
   list-style: none
 }
 
+.info li:last-of-type {
+  margin-bottom: 82px;
+}
+
+.info .back-yellow {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  width: 260px;
+  margin: 0;
+  padding: 0;
+  line-height: 10px;
+}
+
 .info a {
   color: rgb(0, 0, 0);
+  width: 260px;
+  text-decoration: none;
 }
 
 /* Контакты */
@@ -308,6 +487,8 @@ body {
   font-size: 47px;
   font-weight: 800;
   color: rgb(0, 0, 0);
+  margin: 0 auto;
+  padding-bottom: 59px;
 }
 
 .contacts p {
@@ -315,14 +496,33 @@ body {
   font-size: 15px;
   font-weight: 300;
   columns: rgb(70, 70, 70);
+  width: 511px;
+  display: inline-block;
+  margin: 0 auto;
+  padding-bottom: 44px;
 }
 
-.contacts a {
+.contacts img {
+  width: 560px;
+  height: 222px;
+  margin-bottom: 82px;
+}
+
+.contacts .back-yellow {
   font-family: Gilroy;
   font-size: 18px;
   font-weight: 800;
   color: rgb(0, 0, 0);
- 
+  width: 260px;
+  margin: 0;
+  padding: 0;
+  line-height: 10px;
+}
+
+.contacts a {
+  color: rgb(0, 0, 0);
+  width: 260px;
+  text-decoration: none;
 }
 
 /* Footer */
@@ -330,67 +530,144 @@ body {
 .footer {
   background-color: rgb(70, 70, 70);
   color: rgb(255.255.255);
+  margin-top: 98px;
+  height: 323px;
+  padding-top: 65px;
 }
 
-.services-footer a {
-  font-family: Gilroy;
-  font-size: 18px;
-  font-weight: 800;
-  color: rgb(255.255.255);
-  text-transform: uppercase;
+.menu-user img:hover {
+  opacity: 0.6;
 }
 
-.services-footer li {
-  list-style: none;
+.menu-user img:active {
+  opacity: 0.3;
 }
 
-.services-footer {
-  text-align: center;
+.menu-user {
+  display: flex;
+  justify-content: space-between;
 }
 
-.address p {
-  font-family: OpenSans;
-  font-size: 15px;
-  font-weight: 300;
+.menu-user li:first-child::before {
+  content: "";
+  background: url("/img/user.png") no-repeat left center;
+  padding: 10px 0 10px 20px;
 }
 
-.social li {
-  text-align: center;
-  list-style: none
+.menu-user li:nth-of-type(2)::before {
+  content: "";
+  background: url("/img/compare.png") no-repeat left center;
+  padding: 10px 0 10px 20px;
 }
 
-.social a {
-  color: rgb(255.255.255);
+.menu-user li:last-child::before {
+  content: "";
+  background: url("/img/cart.png") no-repeat left center;
+  padding: 10px 0 10px 20px;
 }
 
-.nav-footer a {
-  font-family: OpenSans;
-  font-size: 15px;
-  font-weight: 300;
+.menu-user ul {
+  display: flex;
+  justify-content: space-between;
+  width: 312px;
+  text-decoration: none;
+}
+
+.menu-user a {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nav-footer {
-  text-align: right;
+.menu-user li {
+  opacity: 0.7;
 }
 
-.nav-footer li {
-  list-style: none;
+.menu-user li:hover {
+  opacity: 1;
 }
 
-.tel a {
-  font-family: OpenSans;
-  font-size: 15px;
-  font-weight: 300;
-  color: rgb(255.255.255);
+.menu-user li:active {
+  opacity: 0.3;
 }
 
-.tel {
-  text-align: right;
+.address-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
 }
 
-.html-academy {
-  text-align: right;
+.address-nav p {
+  color: rgb(255, 255, 255);
+}
+
+.address-nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 423px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.address-nav li:hover {
+  opacity: 0.6;
+}
+
+.address-nav li:active {
+  opacity: 0.3;
+}
+
+.address-nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 70px;
+}
+
+.social ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty {
+  width: 80px;
+  height: 7px;
+  background-color: rgb(240, 197, 46);
+  border-style: none;
+}
+
+.social a {
+  opacity: 0.3;
+}
+
+.social a:hover {
+  opacity: 1;
+}
+
+.social a:active {
+  opacity: 0.1;
+}
+
+.social img {
+  padding-right: 11px;
+  padding-left: 11px;
+}
+
+.academy a {
+  opacity: 1;
+}
+
+.academy a:hover {
+  opacity: 0.6;
+}
+
+.academy a:active {
+  opacity: 0.3;
 }
 
 .user label  {
@@ -403,18 +680,21 @@ body {
   font-size: 14px;
 }
 
-.user button {
+.slide-text .back-yellow {
+  line-height: 8px;
+}
+
+.back-yellow {
   width: 200px;
   height: 8px;
   font-family: Gilroy;
   font-size: 18px;
   font-weight: 800;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 4px;
   letter-spacing: 3.6px;
   text-align: center;
   color: rgb(0, 0, 0);
   background-color: rgb(240, 197, 46);
   text-transform: uppercase;
+  border-style: none;
 }
