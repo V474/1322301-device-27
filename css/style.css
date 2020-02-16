@@ -1,40 +1,41 @@
 
 @font-face {
-  font-family: Gilroy;
-  src: url('fonts/gilroyextrabold.woff2'), format('woff2'),
-       url('fonts/gilroyextrabold.woff'), format('woff');
-  font-weight: 800;
-  font-style: normal;
+  font-family: 'Gilroy Extra Bold';
+  src: url('fonts/gilroyextrabold.woff2') format('woff2'),
+       url('fonts/gilroyextrabold.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gilroy Light';
+  src: url('fonts/gilroylight.woff2') format('woff2'),
+       url('fonts/gilroylight.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
 }
 
 @font-face {
-  font-family: Gilroy;
-  src: url('fonts/gilroylight.woff2'), format('woff2'),
-       url('fonts/gilroylight.woff'), format('woff');
-  font-weight: 300;
-  font-style: normal;
+  font-family: 'Open Sans';
+  src: url('fonts/opensans.woff2') format('woff2'),
+       url('fonts/opensans.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
 }
 
 @font-face {
-  font-family: OpenSans;
-  src: url('fonts/opensans.woff2'), format('woff2'),
-       url('fonts/opensans.woff'), format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: OpenSans;
-  src: url('fonts/opensanslight.woff2'), format('woff2'),
-       url('fonts/opensanslight.woff'), format('woff');
-  font-weight: 300;
-  font-style: normal;
+  font-family: 'Open Sans Light';
+  src: url('fonts/opensanslight.woff2') format('woff2'),
+       url('fonts/opensanslight.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
 }
 
 body {
   margin: 0px auto;
   padding-top: 20px;
-  font-family: Gilroy, OpenSans, sans-serif;
+  font-family: 'Gilroy Extra Bold', 'Gilroy Light', 'Open Sans', 'Open Sans Light', sans-serif;
   font-size: 15px;
   font-weight: 300;
   color: rgb(70, 70, 70);
@@ -52,7 +53,7 @@ body {
 
 .logo {
   padding-left: 60px;
-  margin-bottom: -36px;
+  margin-bottom: -19px;
 }
 
 .logo:hover {
@@ -64,21 +65,14 @@ body {
 }
 
 .nav {
+  margin: 0px auto;
   padding-left: 60px;
   padding-right: 60px;
   height: 300px;
-  font-size: 15px;
+  font-family: 'Open Sans Light', sans-serif;
   font-weight: 300;
-  background-color: rgb(240, 197, 46);
-
-}
-
-.nav li:hover {
-  opacity: 0.6;
-}
-
-.nav li:active {
-  opacity: 0.3;
+  font-size: 15px;
+  background-color: rgba(240, 197, 46, 0.5);
 }
 
 .nav li {
@@ -99,7 +93,9 @@ body {
 }
 
 .nav input  {
-  font-family: OpenSans;
+  font-family: 'Open Sans Light', sans-serif;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Навигация для пользователя */
@@ -107,30 +103,48 @@ body {
 .nav-user {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  margin: 0px auto;
+  padding: 50px 0px 0px 0px;
+}
+
+.nav-user li:first-child {
+  display: flex;
+  color: rgba(0, 0, 0, 0.9)
+}
+
+.nav-user li:first-child:active {
+  border-bottom: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+.nav-user input {
+  border: 0px;
+  width: 336px;
+  background-color: rgb(240, 197, 46, 0);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .nav-user li:first-child::before {
   content: "";
-  background: url("/img/search.svg") no-repeat left center;
-  padding: 10px 0 10px 20px;
+  background: url("../img/search.svg") no-repeat left center;
+  padding: 10px 0px 10px 20px;
 }
   
 .nav-user li:nth-of-type(2)::before {
   content: "";
-  background: url("/img/user.svg") no-repeat left center;
+  background: url("../img/user.svg") no-repeat left center;
   padding: 10px 0 10px 20px;
 }
 
 .nav-user li:nth-of-type(3)::before {
   content: "";
-  background: url("/img/compare.svg") no-repeat left center;
+  background: url("../img/compare.svg") no-repeat left center;
   padding: 10px 0 10px 20px;
 }
 
 .nav-user li:nth-of-type(4)::before {
   content: "";
-  background: url("/img/cart.svg") no-repeat left center;
+  background: url("../img/cart.svg") no-repeat left center;
   padding: 10px 0 10px 20px;
 }
 
@@ -139,20 +153,16 @@ body {
 .nav-catalog {
   display: flex;
   justify-content: space-between;
+  margin: 0px auto;
+  padding: 50px 0px 0px 0px;
 }
 
 .nav-catalog li {
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-}
-
-.nav-user input {
-  border: 0px rgb(240, 197, 46);
-  width: 108px;
-  height: 15px;
 }
 
 /* Подменю каталога */
@@ -160,11 +170,11 @@ body {
 .nav-subcatalog {
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
+  padding: 40px 0px 0px 0px;
 }
 
 .nav-subcatalog li {
-  font-family: OpenSans;
+  font-family: 'Open Sans Light', sans-serif;
   font-size: 15px;
   font-weight: 300;
   text-transform: none;
@@ -190,33 +200,34 @@ body {
 }
 
 .slide-text h2 {
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 47px;
   font-weight: 800;
   color: rgb(0, 0, 0);
   line-height: 56px;
   display: inline-block;
   padding-top: 18px;
-  width: 394px;
+  width: 480px;
   margin-bottom: 31px;
 }
 
 .slider a {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 18px;
   font-weight: 800;
 }
 
 .slide p {
   padding-bottom: 50px;
+  font-family: 'Open Sans Light', sans-serif;
+  font-weight: 300;
 }
 
 .slide .back-yellow {
   width: 220px;
   height: 8px;
-  padding-top: 1px;
   padding-bottom: 0px;
   margin-bottom: 76px;
 }
@@ -240,7 +251,7 @@ body {
 }
 
 .slide-text th {
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 36px;
   font-weight: 300;
   padding-bottom: 20px;
@@ -259,62 +270,52 @@ body {
 /* Каталог товаров плитками */
 
 .catalog {
-  font-family: Gilroy;
-  font-size: 18px;
+  font-family: 'Gilroy Extra Bold', sans-serif;
+  font-size: 16px;
   font-weight: 800;
   color: rgb(0, 0, 0);
   margin-top: 217px;
+  line-height: 1.33;
 }
 
 .catalog a {
   text-decoration: none;
-}
-
-.catalog li {
-  list-style: none;
-  display: inline-block;
-  min-width: 160px;
-  max-width: 160px;
-  margin-left: -40px;
-  margin-right: 76px;
-}
-
-.catalog li:last-child {
-  margin-right: -40px;
+  color: rgb(0, 0, 0);
 }
 
 .image-catalog {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  padding: 0px 0px 40px 0px;
 }
 
-.image-catalog  div{
-  background-color: rgb(240, 197, 46);
+.image-catalog li {
   width: 160px;
   height: 160px;
-  opacity: 0.5;
+  background-color: rgba(240, 197, 46, 0.5);
+  list-style: none;
 }
 
-.image-catalog  div:hover {
-  opacity: 1;
+.image-catalog img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 41px;
 }
 
-.catalog a:hover {
-  opacity: 0.3;
+.text-catalog {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow-wrap: normal;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.image-catalog div {
-  display:flex;
-  align-items:center;
-  justify-content: center;
-}
-
-.catalog a {
-  color: rgb(0, 0, 0);
-}
-
-.image-item img:active {
-  opacity: 0.3;
+.text-catalog li {
+  width: 160px;
 }
 
 /* Услуги магазина */
@@ -322,33 +323,16 @@ body {
 .services {
   display: flex;
   margin-top: 180px;
-  height: 319px;
-  width: 100%;
-  font-family: Gilroy;
-  font-size: 18px;
-  font-weight: 800;
+  height: 320px;
   color: rgb(0, 0, 0);
   background-color: rgb(229, 229, 229);
 }
 
 .services h3 {
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 47px;
   font-weight: 800;
   color: rgb(0, 0, 0);
-}
-
-.services li {
-  list-style: none;
-  margin: 0 auto;
-}
-
-.services li:first-child {
-  padding-bottom: 53px;
-}
-
-.services li:nth-child(2) {
-  padding-bottom: 53px;
 }
 
 .services a {
@@ -356,18 +340,10 @@ body {
   text-decoration: none;
 }
 
-.services .back-yellow {
-  width: 160px;
-  font-weight: 800;
-  line-height: 8px;
-}
-
-.services p {
-  font-family: OpenSans;
-  font-size: 15px;
-  font-weight: 300;
-  color: rgb(70, 70, 70);
-  max-width: 426px;
+.services-menu li {
+  display: block;
+  margin-bottom: 57px;
+  list-style: none;
 }
 
 .services-menu {
@@ -380,12 +356,23 @@ body {
   padding-right: 117px;
 }
 
+
+
+.services p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(70, 70, 70);
+  max-width: 426px;
+}
+
 .services-description {
   margin-top: -80px;
   padding-left: 116px;
   display: flex;
   justify-content: space-between;
-
 }
 
 .services-description img {
@@ -426,7 +413,7 @@ body {
 }
 
 .info h2 {
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 47px;
   font-weight: 800;
   color: rgb(0, 0, 0);
@@ -435,14 +422,14 @@ body {
 }
 
 .info p {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 300;
   columns: rgb(70, 70, 70);
   width: 462px;
   display: inline-block;
   margin: 0 auto;
-  padding-bottom: 44px;
+  padding-bottom: 34px;
 }
 
 .info ul {
@@ -450,7 +437,7 @@ body {
 }
 
 .info li {
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 2.5;
@@ -464,14 +451,14 @@ body {
 }
 
 .info .back-yellow {
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 18px;
   font-weight: 800;
   color: rgb(0, 0, 0);
   width: 260px;
   margin: 0;
   padding: 0;
-  line-height: 10px;
+  line-height: 8px;
 }
 
 .info a {
@@ -483,16 +470,17 @@ body {
 /* Контакты */
 
 .contacts h2 {
-  font-family: Gilroy;
+  display: block;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 47px;
   font-weight: 800;
+  padding-bottom: 59px;
   color: rgb(0, 0, 0);
   margin: 0 auto;
-  padding-bottom: 59px;
 }
 
 .contacts p {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 300;
   columns: rgb(70, 70, 70);
@@ -509,14 +497,14 @@ body {
 }
 
 .contacts .back-yellow {
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 18px;
   font-weight: 800;
   color: rgb(0, 0, 0);
   width: 260px;
   margin: 0;
   padding: 0;
-  line-height: 10px;
+  line-height: 8px;
 }
 
 .contacts a {
@@ -530,9 +518,13 @@ body {
 .footer {
   background-color: rgb(70, 70, 70);
   color: rgb(255.255.255);
-  margin-top: 98px;
-  height: 323px;
-  padding-top: 65px;
+  margin: 100px 0px 0px 0px;
+  padding: 62px 0px 65px 0px;
+  background-size: cover;
+}
+
+.menu-user img {
+  display: inline-block;
 }
 
 .menu-user img:hover {
@@ -546,23 +538,25 @@ body {
 .menu-user {
   display: flex;
   justify-content: space-between;
+  height: 35px;
+
 }
 
 .menu-user li:first-child::before {
   content: "";
-  background: url("/img/user.png") no-repeat left center;
+  background: url("../img/user.png") no-repeat left center;
   padding: 10px 0 10px 20px;
 }
 
 .menu-user li:nth-of-type(2)::before {
   content: "";
-  background: url("/img/compare.png") no-repeat left center;
+  background: url("../img/compare.png") no-repeat left center;
   padding: 10px 0 10px 20px;
 }
 
 .menu-user li:last-child::before {
   content: "";
-  background: url("/img/cart.png") no-repeat left center;
+  background: url("../img/cart.png") no-repeat left center;
   padding: 10px 0 10px 20px;
 }
 
@@ -570,11 +564,14 @@ body {
   display: flex;
   justify-content: space-between;
   width: 312px;
-  text-decoration: none;
+  height: 50%;
+  margin: 10px 0px 0px 0px;
 }
 
 .menu-user a {
+  display: inline-block;
   color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
 }
 
 .menu-user li {
@@ -593,21 +590,27 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
+  height: 15px;
 }
 
 .address-nav p {
+  display: inline-block;
+  margin: 0;
+  height: 50%;
   color: rgb(255, 255, 255);
 }
 
 .address-nav ul {
   display: flex;
   justify-content: space-between;
-  width: 423px;
+  width: 500px;
   text-transform: uppercase;
   letter-spacing: 3.6px;
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 18px;
   font-weight: 800;
+  margin: -4px 0px 0px 0px;
+  padding: 0;
 }
 
 .address-nav li:hover {
@@ -626,12 +629,18 @@ body {
 .social {
   display: flex;
   justify-content: space-between;
-  padding-top: 70px;
+  text-align: center;
+  height: 32px;
+  margin: 0;
+  padding: 70px 0px 0px 0px;
+  vertical-align: middle
 }
 
 .social ul {
   display: flex;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
 .empty {
@@ -639,6 +648,7 @@ body {
   height: 7px;
   background-color: rgb(240, 197, 46);
   border-style: none;
+  margin-top: 13px;
 }
 
 .social a {
@@ -654,8 +664,12 @@ body {
 }
 
 .social img {
-  padding-right: 11px;
-  padding-left: 11px;
+  padding: 0px 11px 0px 11px;
+}
+
+.academy img {
+  padding: 0;
+  margin-top: -2px;
 }
 
 .academy a {
@@ -671,12 +685,12 @@ body {
 }
 
 .user label  {
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 18px;
 }
 
 .user input  {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
 }
 
@@ -687,10 +701,10 @@ body {
 .back-yellow {
   width: 200px;
   height: 8px;
-  font-family: Gilroy;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 18px;
   font-weight: 800;
-  line-height: 4px;
+  line-height: 6px;
   letter-spacing: 3.6px;
   text-align: center;
   color: rgb(0, 0, 0);
