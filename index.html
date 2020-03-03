@@ -14,7 +14,7 @@
       <nav class="nav">
         <ul class="nav-user">
           <li>
-            <form action="" method="get">
+            <form action="click" method="get">
               <input name="search" placeholder="Поиск по сайту" type="search">
               <button type="submit">Найти</button>
             </form>
@@ -51,7 +51,7 @@
             <img src="img/monopod.png" alt="Фото палки для селфи">
           </div>
           <div class="slide-text">
-            <h2>Делай селфи, как Бен Стиллер!</h2>
+            <h2>Делай селфи,<br> как Бен Стиллер!</h2>
               <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               <p class="back-yellow"><a href="#">Подробнее</a></p>
               <table class="feature">
@@ -108,13 +108,14 @@
         </div> -->
       </section> 
       <section class="catalog">
+        <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="image-catalog">
-          <li class="image-item"><img width="86" height="117" src="img/monopod.svg"></li>
-          <li class="image-item"><img width="97" height="55" src="img/vr.svg"></li>
-          <li class="image-item"><img width="71" height="87" src="img/action-camera.svg"></li>
-          <li class="image-item"><img width="107" height="65" src="img/fitness-brace.svg"></li>
-          <li class="image-item"><img width="56" height="98" src="img/smart-whatch.svg"></li>
-          <li class="image-item"><img width="132" height="69" src="img/quadcopter.svg"></li>
+          <li class="image-item"><img width="86" height="117" alt="Картинка монопода" src="img/monopod.svg"></li>
+          <li class="image-item"><img width="97" height="55" alt="Картинка VR очков" src="img/vr.svg"></li>
+          <li class="image-item"><img width="71" height="87" alt="Картинка Action камеры" src="img/action-camera.svg"></li>
+          <li class="image-item"><img width="107" height="65" alt="Картинка фитнес браслета" src="img/fitness-brace.svg"></li>
+          <li class="image-item"><img width="56" height="98" alt="Картинка смарт часов" src="img/smart-whatch.svg"></li>
+          <li class="image-item"><img width="132" height="69" alt="Картинка квадрокоптера" src="img/quadcopter.svg"></li>
         </ul>
         <ul class="text-catalog">
           <li class="product"><a href="#">Виртуальная реальность</a></li>
@@ -126,8 +127,8 @@
         </ul>
       </section>
       <section class="services">
-        <div class="services-menu">
         <h2 class="visually-hidden">Услуги нашей организации</h2>
+        <div class="services-menu">
           <ul>
             <li class="back-yellow"><a href="#">Доставка</a></li>
             <li class="back-yellow"><a href="#">Гарантия</a></li>
@@ -141,7 +142,8 @@
           </div>
           <div>
             <img class="delivery" src="img/delivery.png" width="136" height="164" alt="Картинка курьера">
-<!--           </div>
+          </div>
+          <!--  
           <div>
             <h3>Гарантия</h3>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
@@ -155,15 +157,17 @@
           </div>
           <div>
             <img class="delivery" src="img/credit.png" width="156" height="186" alt="Картинка кредитки">
-          </div>    -->
+          </div>    
+          -->
         </div>
       </section>
       <section class="partners">
+        <h2 class="visually-hidden">Наши партнёры</h2>
         <ul>
-          <li class="partner"><a href="#"><img src="img/dji.png" alt="Логотип компании DJI"></img></a></li>
-          <li class="partner"><a href="#"><img src="img/sp-gadgets.png" alt="Логотип компании SP-Gadgets"></img></a></li>
-          <li class="partner"><a href="#"><img src="img/gopro.png" alt="Логотип компании GoPro"></img></a></li>
-          <li class="partner"><a href="#"><img src="img/vive.png" alt="Логотип компании VIVE"></img></a></li>
+          <li class="partner"><a href="#"><img src="img/dji.png" alt="Логотип компании DJI"></a></li>
+          <li class="partner"><a href="#"><img src="img/sp-gadgets.png" alt="Логотип компании SP-Gadgets"></a></li>
+          <li class="partner"><a href="#"><img src="img/gopro.png" alt="Логотип компании GoPro"></a></li>
+          <li class="partner"><a href="#"><img src="img/vive.png" alt="Логотип компании VIVE"></a></li>
         </ul>
       </section>
       <div class="info-contacts">
@@ -225,7 +229,7 @@
       <label for="user-email">Ваш e-mail:</label>
         <input id="user-email" type="email" name="email" placeholder="email@example.com" required>
       <label for="user-text">Текст письма:</label>
-        <textarea id="user-text" type="text" name="text" placeholder="В свободной форме" required></textarea>
+        <textarea id="user-text" name="text" placeholder="В свободной форме" required></textarea>
       <button class="back-yellow" type="submit">Отправить</button>
     </form>
   </body>
