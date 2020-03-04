@@ -53,8 +53,7 @@ body {
 }
 
 .logo {
-  padding-left: 60px;
-  margin-bottom: -19px;
+  margin: 0 auto;
 }
 
 .logo:hover {
@@ -189,8 +188,8 @@ body {
   display: flex;
   justify-content: space-around;
   width: 1010px;
+  margin: 0 auto;
   margin-top: -135px;
-  margin-left: 90px;
 }
 
 .slide:first-of-type::after {
@@ -336,13 +335,16 @@ body {
 /* Услуги магазина */
 
 .services {
-  width: 1160px;
-  margin: 0 auto;
-  display: flex;
   margin-top: 180px;
   height: 320px;
   color: rgb(0, 0, 0);
   background-color: rgb(229, 229, 229);
+}
+
+.services-background {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
 }
 
 .services h3 {
@@ -400,6 +402,8 @@ body {
 /* Нащи партнёры */
 
 .partners {
+  width: 1160px;
+  margin: 0 auto;
   margin-top: 94px;
   margin-bottom: 152px;
 }
@@ -427,6 +431,14 @@ body {
 .info-contacts {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 1160px;
+}
+
+.info {
+  display: block;
+  margin-right: 140px;
+  width: 460px;
 }
 
 .info h2 {
@@ -473,8 +485,7 @@ body {
   font-weight: 800;
   color: rgb(0, 0, 0);
   width: 260px;
-  margin: 0;
-  padding: 0;
+  padding: 0 0;
   line-height: 8px;
 }
 
@@ -487,11 +498,10 @@ body {
 /* Контакты */
 
 .contacts h2 {
-  display: block;
   font-family: 'Gilroy', sans-serif;
   font-size: 47px;
   font-weight: 800;
-  padding-bottom: 59px;
+  padding: 0 0 60px 0;
   color: rgb(0, 0, 0);
   margin: 0 auto;
 }
@@ -536,7 +546,11 @@ body {
   background-color: rgb(70, 70, 70);
   margin: 100px 0px 0px 0px;
   padding: 62px 0px 65px 0px;
-  background-size: cover;
+}
+
+.background-footer {
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .menu-user img {
@@ -747,7 +761,7 @@ body {
   }
 
 
-  
+
 .name-filter {
   display: block;
   text-transform: uppercase;
