@@ -754,16 +754,20 @@ body {
   font-size: 47px;
 }
 
+.sort-background {
+  height: 70px;
+  background-color: rgb(229, 229, 229);
+}
+
 .catalog-monopods {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 auto;
-  }
-
-
+  margin-top: -70px;
+  width: 1160px;
+}
 
 .name-filter {
-  display: block;
   text-transform: uppercase;
   font-family: 'Gilroy', sans-serif;
   font-weight: 800;
@@ -772,20 +776,29 @@ body {
   margin: 0 auto;
 }
 
+.filter {
+  margin-top: 75px;
+}
+
 .catalog-filter {
   display: block;
   background-color: rgb(235, 235, 235);
 }
 
 .catalog-right {
-  width: 760px;
+  margin-left: 60px;
+}
+
+.sort-background {
+  background-color: rgb(235, 235, 235);
+  margin: 0 auto;
 }
 
 .sort {
   display: flex;
   justify-content: space-between;
   width: 760px;
-  background-color: rgb(235, 235, 235);
+  margin: 0 auto;
 }
 
 .sort ul {
@@ -796,18 +809,23 @@ body {
 .goods {
   display: flex;
   flex-flow: row wrap;
-  
+  justify-content: space-between;
+  width: 760px;
+  padding: 0;
+  margin: 75px auto 40px auto;
 }
 
 .catalog-item {
   display: block;
   width: 360px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .nav-buttom ul {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
   width: 760px;
   height: 70px;
   background-color: rgb(235, 235, 235);
