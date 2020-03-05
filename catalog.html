@@ -51,27 +51,37 @@
           <div class="name-filter">
             <p>Фильтр:</p>
           </div>
-          <form class="filter" method="get" action="#">
+          <form class="filter-form" method="get" action="#">
             <div class="filter">
               <div class="cost">
-                <p>Стоимость:</p>
-              </div>
+                <p><label for="price">Стоимость</label>
+                  <input type="range" id="price" name="price" min="1" max="10000" step="1">
+                </p>
+                </div>
               <div class="color">
                 <h3>Цвет</h3>
                 <ul>
-                  <li>Черный</li>
-                  <li>Белый</li>
-                  <li>Синий</li>
-                  <li>Красный</li>
-                  <li>Розовый</li>
+                  <li><input type="checkbox" name="black" id="color-black" checked>
+                    <label for="color-black">Черный</label></li>
+                  <li><input type="checkbox" name="white" id="color-white">
+                    <label for="color-white">Белый</label></li>
+                  <li><input type="checkbox" name="blue" id="color-blue" checked>
+                    <label for="color-blue">Синий</label></li>
+                  <li><input type="checkbox" name="red" id="color-red" checked>
+                    <label for="color-red">Красный</label></li>
+                  <li><input type="checkbox" name="pink" id="color-pink">
+                    <label for="color-pink">Розовый</label></li>
                 </ul>
               </div>
               <div class="bluetooth">
                 <h3>Bluetooth</h3>
                 <ul>
-                  <li>Есть</li>
-                  <li>Нет</li>
+                  <li><label><input type="radio" name="bluetooth" value="yes">  Есть</label></li>
+                  <li><label><input type="radio" name="bluetooth" value="no">  Нет</label></li>
                 </ul>
+              </div>
+              <div class="filter-show back-yellow">
+                <p>Показать</p>
               </div>
             </div>
           </form>
@@ -114,8 +124,8 @@
               </div>
               <div class="catalog-description">
                 <h2><a href="#">Профессиональная селфи-палка</a></h2>
+                <span>1 500 руб.</span>
               </div>
-              <span>1 500 руб.</span>
             </article>
             <article class="catalog-item">
               <div class="catalog-image">
@@ -126,8 +136,8 @@
               </div>
               <div class="catalog-description">
                 <h2><a href="#">Непотопляемая селфи-палка</a></h2>
+                <span>2 500 руб.</span>
               </div>
-              <span>2 500 руб.</span>
             </article>
             <article class="catalog-item">
               <div class="catalog-image">
@@ -138,13 +148,13 @@
               </div>
               <div class="catalog-description">
                 <h2><a href="#">Селфи-палка «Следуй за мной»</a></h2>
+                <span>4 900 руб.</span>
               </div>
-              <span>4 900 руб.</span>
             </article>
           </section>
-          <section class="nav-buttom">
+          <section class="nav-bottom">
             <h2 class="visually-hidden">Навигация по страницам товаров</h2>
-            <ul>
+            <ul class="nav-bottom-content">
               <li><a href="#">Назад</a></li>
               <li><a href="#">1</a></li>
               <li><a href="#">2</a></li>

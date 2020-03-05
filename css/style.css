@@ -66,7 +66,7 @@ body {
 
 .nav {
   margin: 0px auto;
-  width: 1160px;
+  max-width: 1160px;
   padding-left: 60px;
   padding-right: 60px;
   height: 300px;
@@ -743,7 +743,7 @@ body {
   border-style: none;
 }
 
-/* Каталог моноподов */
+/* Раздел с товаром | catalog */
 
 .catalog-name h1 {
   display: flex;
@@ -761,33 +761,113 @@ body {
 
 .catalog-monopods {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin: 0 auto;
-  margin-top: -70px;
+  margin-top: -60px;
   width: 1160px;
 }
 
-.name-filter {
-  text-transform: uppercase;
-  font-family: 'Gilroy', sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  background-color: rgb(217, 217, 217);
-  margin: 0 auto;
-}
-
-.filter {
-  margin-top: 75px;
-}
+/* Фильтр | catalog */
 
 .catalog-filter {
-  display: block;
+  padding: 0 60px;
   background-color: rgb(235, 235, 235);
+}
+
+.filter-form {
+  display: block;
+  width: 200px;
+}
+
+.name-filter {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3.2px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+.cost {
+  display: block;
+  margin-top: 75px;
+  height: 138px;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.cost label {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+  color: rgb(0, 0, 0);
+}
+
+.cost input {
+  margin-top: 30px;
+}
+
+.color {
+  display: block;
+  height: 283px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.color ul {
+  padding: 0;
+}
+
+.color li {
+  list-style: none;
+}
+
+.color label {
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.86;
+  letter-spacing: 0.14px;
+}
+
+.color h3 {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.bluetooth h3 {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.bluetooth li {
+  list-style: none;
+}
+
+.bluetooth ul {
+  padding: 0;
+}
+
+.bluetooth label {
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.86;
+  letter-spacing: 0.14px;
+}
+
+.filter-show {
+  margin-top: 55px;
 }
 
 .catalog-right {
   margin-left: 60px;
 }
+
+/* Сортирока товара | catalog */
 
 .sort-background {
   background-color: rgb(235, 235, 235);
@@ -801,10 +881,44 @@ body {
   margin: 0 auto;
 }
 
+.sort h3 {
+  text-transform: uppercase;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 3.2px
+}
+
 .sort ul {
   display: flex;
   justify-content: space-between;
 }
+
+.sort li:not(:first-child) {
+  margin-left: 30px;
+}
+
+.sort li:last-child {
+  margin-left: 20px;
+}
+
+.sort li {
+  list-style: none;
+}
+
+.sort a {
+  font-family: OpenSans;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.sort a:active {
+  color: rgb(0, 0, 0);
+}
+
+/* Товар плитками | catalog */
 
 .goods {
   display: flex;
@@ -818,15 +932,51 @@ body {
 .catalog-item {
   display: block;
   width: 360px;
-  margin: 0;
+  margin-bottom: 50px;
 }
 
-.nav-buttom ul {
+.catalog-description a {
+  padding: 0;
+  margin: 0;
+  width: 252px;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* Перелистывание страниц с товарами | catalog */
+
+.nav-bottom {
+  background-color: rgb(235, 235, 235);
+  max-width: 760px;
+  max-height: 70px;
+  padding: 30px;
+}
+
+.nav-bottom-content {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  width: 760px;
-  height: 70px;
-  background-color: rgb(235, 235, 235);
+  list-style: none;
+}
+
+.nav-bottom-content li:first-child {
+  margin-right: 200px;
+}
+
+.nav-bottom-content li:last-child {
+  margin-left: 200px;
+}
+
+.nav-bottom-content a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 3.2px;
 }
