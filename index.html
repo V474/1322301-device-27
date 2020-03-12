@@ -8,44 +8,47 @@
   </head>
   <body>
     <header class="main-header">
+      <div class="logo">
+        <img src="img/device.png" width="163" height="35" alt="Логотип"/>
+      </div>
       <nav class="nav">
-        <div class="logo">
-          <img src="img/device.png" width="163" height="35" alt="Логотип"/>
+        <div class="nav-user">
+          <ul>
+            <li>
+              <img src="../img/search.svg" alt="Иконка поиска">
+              <form action="click" method="get">
+                <input name="search" placeholder="Поиск по сайту" type="search">
+                <button type="submit">Найти</button>
+              </form>
+            </li>
+            <li><a href="#"><img src="../img/user.svg" alt="Иконка входа"> Войти</a></li>
+            <li><a href="#"><img src="../img/compare.svg" alt="Иконка сравнения"> Сравнить</a></li>
+            <li><a href="#"><img src="../img/cart.svg" alt="Иконка корзины"> Корзина</a></li>
+          </ul>
+        </div>  
+        <div class="nav-services">
+          <ul>
+            <li><a href="catalog.html">Каталог товаров <img src="../img/plus.png" alt="Иконка знака плюс"></a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
         </div>
-        <ul class="nav-user">
-          <li>
-            <form action="click" method="get">
-              <input name="search" placeholder="Поиск по сайту" type="search">
-              <button type="submit">Найти</button>
-            </form>
-          </li>
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
-        <ul class="nav-catalog">
-          <li><a href="catalog.html">Каталог товаров</a>
-            <ul class="nav-subcatalog">
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="catalog.html">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
-              <li><a href="#">Квадрокоптеры</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
+        <div class="nav-subcatalog">
+          <ul>
+            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="catalog.html">Моноподы для селфи</a></li>
+            <li><a href="#">Экшн-камеры</a></li>
+            <li><a href="#">Фитнес-браслеты</a></li>
+            <li><a href="#">Умные часы</a></li>
+            <li><a href="#">Квадрокоптеры</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
       <h1 class="visually-hidden">Интернет магазин "Девайс"</h1>
       <section class="slider">
-        <button type="button">Слайд 1</button>
-        <button type="button">Слайд 2</button>
-        <button type="button">Слайд 3</button>
         <div class="slide">
           <div class="slide-image">
             <img src="img/monopod.png" alt="Фото палки для селфи">
@@ -53,21 +56,28 @@
           <div class="slide-text">
             <h2>Делай селфи,<br> как Бен Стиллер!</h2>
               <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <p class="back-yellow"><a href="#">Подробнее</a></p>
+              <div class="slide-shifter">
+                <div class="back-yellow"><a href="#">Подробнее</a></div>
+                <div class="silde-radio">
+                  <input type="radio" id="slide-1" checked>
+                  <input type="radio" id="slide-2">
+                  <input type="radio" id="slide-3">
+                </div>
+              </div>
               <table class="feature">
-              <tr>
-                <th>8,5 м</th>
-                <th>5 кг</th>
-                <th>Карбон</th>
-              </tr>
-              <tr>
-                <td>Вес палки</td>
-                <td>Длина палки</td>
-                <td>Материал</td>
-              </tr>
-            </table>
+                <tr>
+                  <th>8,5 м</th>
+                  <th>5 кг</th>
+                  <th>Карбон</th>
+                </tr>
+                <tr>
+                  <td>Вес палки</td>
+                  <td>Длина палки</td>
+                  <td>Материал</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
 <!--         <div class="slide">
           <div class="slide-image">
             <img src="img/bracelet.png" alt="Фото фитнес браслета">
@@ -110,8 +120,8 @@
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="image-catalog">
-          <li class="image-item"><img width="86" height="117" alt="Картинка монопода" src="img/monopod.svg"></li>
           <li class="image-item"><img width="97" height="55" alt="Картинка VR очков" src="img/vr.svg"></li>
+          <li class="image-item"><img width="86" height="117" alt="Картинка монопода" src="img/monopod.svg"></li>
           <li class="image-item"><img width="71" height="87" alt="Картинка Action камеры" src="img/action-camera.svg"></li>
           <li class="image-item"><img width="107" height="65" alt="Картинка фитнес браслета" src="img/fitness-brace.svg"></li>
           <li class="image-item"><img width="56" height="98" alt="Картинка смарт часов" src="img/smart-whatch.svg"></li>
