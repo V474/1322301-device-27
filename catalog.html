@@ -9,7 +9,7 @@
   <body>
     <header class="main-header">
       <div class="logo">
-        <img src="img/device.png" width="163" height="35" alt="Логотип"/>
+        <a href="index.html"><img src="img/device.png" width="163" height="35" alt="Логотип"/></a>
       </div>
       <nav class="nav">
         <div class="nav-user">
@@ -73,16 +73,26 @@
               <div class="color">
                 <h3>Цвет</h3>
                 <ul>
-                  <li><input type="checkbox" name="black" id="color-black" checked>
-                    <label for="color-black">Черный</label></li>
-                  <li><input type="checkbox" name="white" id="color-white">
-                    <label for="color-white">Белый</label></li>
-                  <li><input type="checkbox" name="blue" id="color-blue" checked>
-                    <label for="color-blue">Синий</label></li>
-                  <li><input type="checkbox" name="red" id="color-red" checked>
-                    <label for="color-red">Красный</label></li>
-                  <li><input type="checkbox" name="pink" id="color-pink">
-                    <label for="color-pink">Розовый</label></li>
+                  <li><label><input type="checkbox" name="black" class="checkbox" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="text-checkbox">Черный</span>
+                  </label></li>
+                  <li><label><input type="checkbox" name="white" class="checkbox">
+                    <span class="custom-checkbox"></span>
+                    <span class="text-checkbox">Белый</span>
+                  </label></li>
+                  <li><label><input type="checkbox" name="blue" class="checkbox" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="text-checkbox">Синий</span>
+                  </label></li>
+                  <li><label><input type="checkbox" name="red" class="checkbox" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="text-checkbox">Красный</span>
+                  </label></li>
+                  <li><label><input type="checkbox" name="pink" class="checkbox">
+                    <span class="custom-checkbox"></span>
+                    <span class="text-checkbox">Розовый</span>
+                  </label></li>
                 </ul>
               </div>
               <div class="bluetooth">
@@ -108,8 +118,8 @@
             </ul>
             <div class="sort-updown">
               <ul>
-                <li><a href="#">up</a></li>
-                <li><a href="#">down</a></li>
+                <li><a href="#"><img src="../img/icon-up.svg" alt="Сортировка вверх"></li>
+                <li><a href="#"><img src="../img/icon-down.svg" alt="Сортировка вниз"></a></li>
               </ul>
             </div>
           </div>
@@ -122,10 +132,10 @@
                   alt="Любительская палка для селфи"
                 />
               </div>
-              <div class="catalog-description">
+              <div class="description-good">
                 <h2><a href="#">Любительская селфи-палка</a></h2>
+                <span>500 руб.</span>
               </div>
-              <span>500 руб.</span>
             </article>
             <article class="catalog-item">
               <div class="catalog-image">
@@ -134,7 +144,7 @@
                   alt="Профессиональная палка для селфи"
                 />
               </div>
-              <div class="catalog-description">
+              <div class="description-good">
                 <h2><a href="#">Профессиональная селфи-палка</a></h2>
                 <span>1 500 руб.</span>
               </div>
@@ -146,7 +156,7 @@
                   alt="Непотопляемая палка для селфи"
                 />
               </div>
-              <div class="catalog-description">
+              <div class="description-good">
                 <h2><a href="#">Непотопляемая селфи-палка</a></h2>
                 <span>2 500 руб.</span>
               </div>
@@ -158,7 +168,7 @@
                   alt="Селфи-палка «Следуй за мной»"
                 />
               </div>
-              <div class="catalog-description">
+              <div class="description-good">
                 <h2><a href="#">Селфи-палка «Следуй за мной»</a></h2>
                 <span>4 900 руб.</span>
               </div>
