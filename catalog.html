@@ -3,32 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <title>Каталог товаров "Девайс"</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="main-header">
       <div class="logo">
-        <a href="index.html"><img src="img/device.png" width="163" height="35" alt="Логотип"/></a>
+        <a href="./index.html"><img src="./img/device.png" width="163" height="35" alt="Логотип"/></a>
       </div>
       <nav class="nav">
         <div class="nav-user">
           <ul>
             <li>
-              <img src="../img/search.svg" alt="Иконка поиска">
-              <form action="click" method="get">
+              <form action="https://echo.htmlacademy.ru" method="get">
                 <input name="search" placeholder="Поиск по сайту" type="search">
                 <button type="submit">Найти</button>
               </form>
             </li>
-            <li><a href="#"><img src="../img/user.svg" alt="Иконка входа"> Войти</a></li>
-            <li><a href="#"><img src="../img/compare.svg" alt="Иконка сравнения"> Сравнить</a></li>
-            <li><a href="#"><img src="../img/cart.svg" alt="Иконка корзины"> Корзина</a></li>
+            <li><a href="#"><img src="./img/user.svg" alt="Иконка входа"> Войти</a></li>
+            <li><a href="#"><img src="./img/compare.svg" alt="Иконка сравнения"> Сравнить</a></li>
+            <li><a href="#"><img src="./img/cart.svg" alt="Иконка корзины"> Корзина</a></li>
           </ul>
         </div>  
         <div class="nav-services">
           <ul>
-            <li><a href="catalog.html">Каталог товаров <img src="../img/plus.png" alt="Иконка знака плюс"></a></li>
+            <li><a href="./catalog.html">Каталог товаров <img src="./img/plus.png" alt="Иконка знака плюс"></a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Гарантия</a></li>
             <li><a href="#">Контакты</a></li>
@@ -37,7 +36,7 @@
         <div class="nav-subcatalog">
           <ul>
             <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
+            <li><a>Моноподы для селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
             <li><a href="#">Фитнес-браслеты</a></li>
             <li><a href="#">Умные часы</a></li>
@@ -52,9 +51,9 @@
       </div>
       <div class="nav-way">
         <ul>
-          <li><a href="#">Главная</a></li>
+          <li><a href="./index.html">Главная</a></li>
           <li><a href="#">Каталог товаров</a></li>
-          <li><a href="#">Моноподы для селфи</a></li>
+          <li><a>Моноподы для селфи</a></li>
         </ul>
       </div>
       <div class="sort-background"></div>
@@ -63,7 +62,7 @@
           <div class="name-filter">
             <p>Фильтр:</p>
           </div>
-          <form class="filter-form" method="get" action="#">
+          <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
             <div class="filter">
               <div class="cost">
                 <p><label for="price">Стоимость</label>
@@ -98,13 +97,17 @@
               <div class="bluetooth">
                 <h3>Bluetooth</h3>
                 <ul>
-                  <li><label><input type="radio" name="bluetooth" value="yes">  Есть</label></li>
-                  <li><label><input type="radio" name="bluetooth" value="no">  Нет</label></li>
+                  <li><label><input type="radio" name="bluetooth" value="yes" class="bluetooth-radio" checked>
+                    <span class="custom-bluetooth"></span></label>
+                    <span class="text-checkbox">Есть</span></li>
+                  <li><label><input type="radio" name="bluetooth" value="no" class="bluetooth-radio">
+                    <span class="custom-bluetooth"></span></label>
+                    <span class="text-checkbox">Нет</span></li>
                 </ul>
               </div>
-              <div class="filter-show back-yellow">
-                <p>Показать</p>
-              </div>
+              <button class="filter-show back-yellow" type="submit">
+                <span>Показать</span>
+              </button>
             </div>
           </form>
         </aside>
@@ -118,8 +121,8 @@
             </ul>
             <div class="sort-updown">
               <ul>
-                <li><a href="#"><img src="../img/icon-up.svg" alt="Сортировка вверх"></li>
-                <li><a href="#"><img src="../img/icon-down.svg" alt="Сортировка вниз"></a></li>
+                <li><a href="#"><img src="./img/icon-up.svg" alt="Сортировка вверх"></a></li>
+                <li><a href="#"><img src="./img/icon-down.svg" alt="Сортировка вниз"></a></li>
               </ul>
             </div>
           </div>
@@ -128,7 +131,7 @@
             <article class="catalog-item">
               <div class="catalog-image">
                 <img
-                  src="img/monopod-amateur.jpg"
+                  src="./img/monopod-amateur.jpg"
                   alt="Любительская палка для селфи"
                 />
               </div>
@@ -140,7 +143,7 @@
             <article class="catalog-item">
               <div class="catalog-image">
                 <img
-                  src="img/monopod-pro.jpg"
+                  src="./img/monopod-pro.jpg"
                   alt="Профессиональная палка для селфи"
                 />
               </div>
@@ -152,7 +155,7 @@
             <article class="catalog-item">
               <div class="catalog-image">
                 <img
-                  src="img/monopod-water.jpg"
+                  src="./img/monopod-water.jpg"
                   alt="Непотопляемая палка для селфи"
                 />
               </div>
@@ -164,7 +167,7 @@
             <article class="catalog-item">
               <div class="catalog-image">
                 <img
-                  src="img/monopod-follow.jpg"
+                  src="./img/monopod-follow.jpg"
                   alt="Селфи-палка «Следуй за мной»"
                 />
               </div>
@@ -190,13 +193,8 @@
     <footer class="footer">
     <div class="background-footer">
       <div class="menu-user">
-        <a href="../index.html"
-          ><img
-            src="img/device-footer.png"
-            width="163"
-            height="35"
-            alt="Логотип магазина Device"
-        /></a>
+        <a href="./index.html">
+          <img src="./img/device-footer.png" width="163" height="35" alt="Логотип магазина Device"/></a>
         <ul>
           <li><a href="#">Войти</a></li>
           <li><a href="#">Сравнить</a></li>
@@ -216,42 +214,13 @@
         <div class="empty"></div>
         <p class="visually-hidden">Социальные сети</p>
         <ul>
-          <li>
-            <a href="#"
-              ><img
-                src="img/facebook.svg"
-                width="32"
-                height="32"
-                alt="Логотип Facbook"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="img/instagram.svg"
-                width="32"
-                height="32"
-                alt="Логотип Instagram"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="img/twitter.svg"
-                width="32"
-                height="32"
-                alt="Логотип Twitter"
-            /></a>
-          </li>
+          <li><a href="#"><img src="./img/facebook.svg" width="32" height="32" alt="Логотип Facbook"/></a></li>
+          <li><a href="#"><img src="./img/instagram.svg" width="32" height="32" alt="Логотип Instagram"/></a></li>
+          <li><a href="#"><img src="./img/twitter.svg" width="32" height="32" alt="Логотип Twitter"/></a></li>
         </ul>
         <div class="academy">
-          <a href="https://htmlacademy.ru/intensive/htmlcss"
-            ><img
-              src="img/logo-htmlacademy.png"
-              width="27"
-              height="35"
-              alt="HTML Academy"
-          /></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="./img/logo-htmlacademy.png" width="27" height="35" alt="HTML Academy"/></a>
         </div>
       </div>
     </div>
