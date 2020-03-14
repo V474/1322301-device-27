@@ -47,14 +47,15 @@
     </header>
     <main>
       <h1 class="visually-hidden">Интернет магазин "Девайс"</h1>
-      <section class="slider">
-        <div class="slide">
+      <section class="wrapper">
+      <div class="slider">
+        <div class="slider__item filter">
           <div class="slide-image">
             <img src="./img/monopod.png" alt="Фото палки для селфи">
           </div>
           <div class="slide-text">
             <h2>Делай селфи,<br> как Бен Стиллер!</h2>
-              <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               <div class="slide-shifter">
                 <a href="./catalog.html" class="back-yellow">Подробнее</a>
                 <ul class="slides-radio">
@@ -80,14 +81,24 @@
               </table>
             </div>
           </div>
-<!--         <div class="slide">
+        <div class="slider__item filter">
           <div class="slide-image">
             <img src="./img/bracelet.png" alt="Фото фитнес браслета">
           </div>
           <div class="slide-text">
-            <h2>Худеем правильно!</h2>
+            <h2>Худеем <br> правильно!</h2>
               <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              <p class="back-yellow"><a href="#">Подробнее</a></p>
+              <div class="slide-shifter">
+                <a href="./catalog.html" class="back-yellow">Подробнее</a>
+                <ul class="slides-radio">
+                  <li><label><input type="radio" name="slide" class="slide-radio" checked>
+                    <span class="custom-radio"></span></label></li>
+                  <li><label><input type="radio" name="slide" class="slide-radio">
+                    <span class="custom-radio"></span></label></li>
+                  <li><label><input type="radio" name="slide" class="slide-radio">
+                    <span class="custom-radio"></span></label></li>
+                </ul>
+              </div>
             <table class="feature">
               <tr>
                 <th>48 часов</th>
@@ -98,14 +109,24 @@
             </table>
           </div>
         </div>
-        <div class="slide">
+        <div class="slider__item filter">
           <div class="slide-image">
             <img src="./img/quadrocopter.png" alt="Фото квадрокоптера">
           </div>
           <div class="slide-text">
             <h2>Порхает как бабочка, жалит как пчела!</h2>
               <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              <p class="back-yellow"><a href="#">Подробнее</a></p>
+              <div class="slide-shifter">
+                <a href="./catalog.html" class="back-yellow">Подробнее</a>
+                <ul class="slides-radio">
+                  <li><label><input type="radio" name="slide" class="slide-radio" checked>
+                    <span class="custom-radio"></span></label></li>
+                  <li><label><input type="radio" name="slide" class="slide-radio">
+                    <span class="custom-radio"></span></label></li>
+                  <li><label><input type="radio" name="slide" class="slide-radio">
+                    <span class="custom-radio"></span></label></li>
+                </ul>
+              </div>
             <table class="feature">
               <tr>
                 <th>800 м</th>
@@ -117,7 +138,14 @@
               </tr>
             </table>
           </div>
-        </div> -->
+        </div>
+      </div>
+      <!-- Подключаем jQuery -->
+			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+			<!-- Подключаем слайдер Slick -->
+			<script src="js/slick.min.js"></script>
+			<!-- Подключаем файл скриптов -->
+			<script src="js/script.js"></script>
       </section> 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
@@ -178,10 +206,10 @@
       <section class="partners">
         <h2 class="visually-hidden">Наши партнёры</h2>
         <ul>
-          <li class="partner"><a href="#"><img src="./img/dji.png" alt="Логотип компании DJI"></a></li>
-          <li class="partner"><a href="#"><img src="./img/sp-gadgets.png" alt="Логотип компании SP-Gadgets"></a></li>
-          <li class="partner"><a href="#"><img src="./img/gopro.png" alt="Логотип компании GoPro"></a></li>
-          <li class="partner"><a href="#"><img src="./img/vive.png" alt="Логотип компании VIVE"></a></li>
+          <li class="partner"><a href="#"><img src="./img/m-dji.png" alt="Логотип компании DJI"></a></li>
+          <li class="partner"><a href="#"><img src="./img/m-sp-gadgets.png" alt="Логотип компании SP-Gadgets"></a></li>
+          <li class="partner"><a href="#"><img src="./img/m-gopro.png" alt="Логотип компании GoPro"></a></li>
+          <li class="partner"><a href="#"><img src="./img/m-vive.png" alt="Логотип компании VIVE"></a></li>
         </ul>
       </section>
       <div class="info-contacts">

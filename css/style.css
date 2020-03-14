@@ -204,7 +204,7 @@ body {
 
 /* Слайдер */
 
-.slide {
+.slider__item {
   display: flex;
   justify-content: space-around;
   width: 1010px;
@@ -212,7 +212,7 @@ body {
   margin-top: -105px;
 }
 
-.slide:first-of-type::before {
+.slider__item:first-of-type::before {
   content: '';
   position: absolute;
   width: 100px;
@@ -222,7 +222,7 @@ body {
   margin-left: 45px;
 }
 
-.slide:first-of-type::after {
+.slider__item:first-of-type::after {
   content: '01';
   font-family: 'Gilroy', Arial, sans-serif;
   position: absolute;
@@ -257,7 +257,7 @@ body {
   font-weight: 800;
 }
 
-.slide p {
+.slider__item p {
   margin-bottom: 64px;
   width: 480px;
   height: 46px;
@@ -272,11 +272,11 @@ body {
   color: rgb(70, 70, 70);
 }
 
-.slide .back-yellow {
+.slider__item .back-yellow {
   margin-bottom: 65px;
 }
 
-.slide a:active {
+.slider__item a:active {
   opacity: 0.3;
 }
 
@@ -306,7 +306,7 @@ body {
   position: relative;
 }
 
-.custom-radio {
+/* .custom-radio {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -331,7 +331,7 @@ body {
 
 .slide-radio:checked + .custom-radio::before {
   opacity: 1;
-}
+} */
 
 .slide-text th {
   height: 26px;
@@ -363,6 +363,95 @@ body {
   width: 425px;
 }
 
+/* Слайдер анимация */
+
+.wrapper {
+	height: 100%;
+	display: flex;
+	justify-content:center;
+  align-items: center;
+}
+
+/* Слайдер */
+
+.slick-slider {
+	min-width: 0;
+}
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+	overflow: hidden;
+}
+
+/* Лента слайдов */
+
+.slick-track {
+	display: flex;
+	align-items: flex-start;
+}
+
+.slider {
+	position: relative;
+	padding: 0px 60px;
+}
+
+.slider .slick-arrow {
+	position: absolute;
+	top: 50%;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 30px;
+	height: 60px;
+}
+
+.slider .slick-dots {
+	display: flex;
+	align-items: center;
+  justify-content: center;
+}
+
+.slider .slick-dots {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.slider .slick-dots li {
+  display: block;
+	list-style: none;
+	margin: 0px 10px;
+}
+
+.slider .slick-dots button {
+  display: inline-block;
+  bottom: 161px;
+  left: 425px;
+  width: 8px;
+  height: 13px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: relative;
+  font-size: 0;
+}
+
+.slider .slick-dots li.slick-active button {
+  font-size: 0;
+  width: 10px;
+  height: 13px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+
+.slider__item {
+  align-items: center;
+	padding: 0px 15px;
+}
+
+.slider__item img{
+	max-width: 100%;
+}
 
 /* Каталог товаров плитками */
 
@@ -460,8 +549,6 @@ body {
   padding-right: 117px;
 }
 
-
-
 .services p {
   font-family: 'Open Sans', sans-serif;
   line-height: 2;
@@ -500,10 +587,26 @@ body {
 
 .partners li {
   list-style: none;
-  opacity: 20%;
+  opacity: 0.2;
 }
 
-.partners li:hover{
+.partners li:first-child:hover{
+  background-image: url('../img/dji.png');
+  opacity: 1;
+}
+
+.partners li:nth-child(2):hover{
+  background-image: url('../img/sp-gadgets.png');
+  opacity: 1;
+}
+
+.partners li:nth-child(3):hover{
+  background-image: url('../img/gopro.png');
+  opacity: 1;
+}
+
+.partners li:last-child:hover{
+  background-image: url('../img/vive.png');
   opacity: 1;
 }
 
