@@ -73,9 +73,14 @@ body {
   padding-left: 60px;
   padding-right: 60px;
   height: 300px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-family: 'OpenSans', Arial, sans-serif;
   font-size: 15px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: 0.5px;
+  color: rgb(0, 0, 0);
   background-color: rgba(240, 197, 46, 0.5);
 }
 
@@ -105,7 +110,7 @@ body {
 /* Навигация для пользователя */
 
 .nav-user {
-  padding-top: 50px;
+  padding-top: 44px;
 }
 
 .nav-user ul {
@@ -124,19 +129,43 @@ body {
 }
 
 .nav-user li:first-child {
-  margin-right: 220px;
+  margin-right: auto;
 }
 
 .nav-user li:nth-child(2) {
-  padding-right: 200px;
+  padding-right: 217px;
 }
+
+.nav-user li:nth-child(3) {
+  padding-right: 42px;
+}
+
+.nav-user li:nth-child(2)::before {
+  content: '';
+  background: url('../img/user.svg') no-repeat left center;
+  padding: 10px 0 8px 25px;
+}
+
+.nav-user li:nth-child(3)::before {
+  content: '';
+  background: url('../img/compare.svg') no-repeat left center;
+  padding: 10px 0 10px 18px;
+}
+
+.nav-user li:last-child::before {
+  content: '';
+  background: url('../img/cart.svg') no-repeat left center;
+  padding: 10px 0 10px 22px;
+}
+
 
 /* Поиск в навигации */
 
 .nav-user li:first-child::before {
   content: '';
   background: url('../img/search.svg') no-repeat left center;
-  padding: 10px 0 10px 20px;
+  padding: 0px 0px 8px 38px;
+  margin-left: 3px;
 }
 
 .nav-user li:first-child {
@@ -155,7 +184,8 @@ body {
 /* Навигация / Сервисы */
 
 .nav-services {
-  padding-top: 50px;
+  margin-left: -1px;
+  padding-top: 32px;
 }
 
 .nav-services ul {
@@ -171,11 +201,16 @@ body {
 }
 
 .nav-services li:first-child {
-  margin-right: 230px;
+  margin-right: auto;
 }
 
-.nav-services li:nth-child(3) {
-  padding-right: 90px;
+.nav-services li:nth-child(2) {
+  padding-right: 34px;
+}
+
+.nav-services li:last-child {
+  margin-right: -3px;
+  padding-left: 108px;
 }
 
 /* Навигация / Подкаталог */
@@ -204,49 +239,56 @@ body {
 
 /* Слайдер */
 
-.slider__item {
+.slide {
   display: flex;
-  justify-content: space-around;
-  width: 1010px;
+  justify-content: space-between;
+  width: 990px;
   margin: 0 auto;
-  margin-top: -105px;
+  margin-top: -112px;
+  padding-left: 10px;
 }
 
-.slider__item:first-of-type::before {
+.slide:first-of-type::before {
   content: '';
   position: absolute;
   width: 100px;
   height: 7px;
   background-color: rgb(255, 255, 255);
-  margin-top: 40px;
-  margin-left: 45px;
+  margin-top: 37px;
+  margin-left: 510px;
 }
 
-.slider__item:first-of-type::after {
+.slide:first-of-type::after {
   content: '01';
-  font-family: 'Gilroy', Arial, sans-serif;
   position: absolute;
-  margin-left: 440px;
-  margin-top: -30px;
-  font-size: 170px;
+  margin-left: 839px;
+  margin-top: -14px;
+  width: 166px;
+  height: 131px;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 179px;
   font-weight: 800;
-  letter-spacing: -15px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 1.79px;
+  text-align: right;
   color: rgb(255, 255, 255);
 }
 
-.slide-image img:first-of-type {
-  padding-right: 100px;
-}
 
 .slide-text h2 {
-  margin-top: 75px;
+  margin-top: 80px;
+  margin-bottom: 21px;
   font-family: 'Gilroy', Arial, sans-serif;
-  font-size: 40px;
+  font-size: 47px;
   font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: 0.47px;
+  text-align: left;
   color: rgb(0, 0, 0);
-  display: inline-block;
-  width: 520px;
-  line-height: 1.4;
 }
 
 .slider a {
@@ -257,8 +299,8 @@ body {
   font-weight: 800;
 }
 
-.slider__item p {
-  margin-bottom: 64px;
+.slide p {
+  margin-bottom: 67px;
   width: 480px;
   height: 46px;
   font-family: 'OpenSans', sans-serif;
@@ -272,11 +314,11 @@ body {
   color: rgb(70, 70, 70);
 }
 
-.slider__item .back-yellow {
-  margin-bottom: 65px;
+.slide .back-yellow {
+  margin-bottom: 64px;
 }
 
-.slider__item a:active {
+.slide a:active {
   opacity: 0.3;
 }
 
@@ -306,7 +348,7 @@ body {
   position: relative;
 }
 
-/* .custom-radio {
+.custom-radio {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -331,10 +373,23 @@ body {
 
 .slide-radio:checked + .custom-radio::before {
   opacity: 1;
-} */
+}
+
+.feature th:first-child {
+  width: 82px;
+  padding-right: 72px;
+}
+
+.feature th:nth-child(2) {
+  width: 63px;
+  padding-right: 73px;
+}
+
+.feature td:first-child {
+  padding-top: 6px;
+}
 
 .slide-text th {
-  height: 26px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 36px;
   font-weight: 300;
@@ -347,7 +402,6 @@ body {
 }
 
 .slide-text td {
-  height: 11px;
   font-family: 'OpenSans', Arial, sans-serif;
   font-size: 13px;
   font-weight: 300;
@@ -359,106 +413,12 @@ body {
   color: rgb(70, 70, 70);
 }
 
-.feature {
-  width: 425px;
-}
-
-/* Слайдер анимация */
-
-.wrapper {
-	height: 100%;
-	display: flex;
-	justify-content:center;
-  align-items: center;
-}
-
-/* Слайдер */
-
-.slick-slider {
-	min-width: 0;
-}
-
-/* Ограничивающая оболочка */
-
-.slick-list {
-	overflow: hidden;
-}
-
-/* Лента слайдов */
-
-.slick-track {
-	display: flex;
-	align-items: flex-start;
-}
-
-.slider {
-	position: relative;
-	padding: 0px 60px;
-}
-
-.slider .slick-arrow {
-	position: absolute;
-	top: 50%;
-	margin: -30px 0px 0px 0px;
-	z-index: 10;
-	font-size: 0;
-	width: 30px;
-	height: 60px;
-}
-
-.slider .slick-dots {
-	display: flex;
-	align-items: center;
-  justify-content: center;
-}
-
-.slider .slick-dots {
-  margin: 0 auto;
-  padding: 0;
-}
-
-.slider .slick-dots li {
-  display: block;
-	list-style: none;
-	margin: 0px 10px;
-}
-
-.slider .slick-dots button {
-  display: inline-block;
-  bottom: 161px;
-  left: 425px;
-  width: 8px;
-  height: 13px;
-  border: 1px solid rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  position: relative;
-  font-size: 0;
-}
-
-.slider .slick-dots li.slick-active button {
-  font-size: 0;
-  width: 10px;
-  height: 13px;
-  border: 1px solid rgb(0, 0, 0);
-  background-color: rgb(0, 0, 0);
-}
-
-.slider__item {
-  align-items: center;
-	padding: 0px 15px;
-}
-
-.slider__item img{
-	max-width: 100%;
-}
-
 /* Каталог товаров плитками */
 
 .catalog {
   width: 1160px;
   margin: 0 auto;
-  margin-top: 106px;
+  margin-top: 102px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -475,20 +435,20 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0px 0px 40px 0px;
+  padding: 0px 0px 35px 0px;
 }
 
 .image-catalog li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 160px;
   height: 160px;
   background-color: rgba(240, 197, 46, 0.5);
   list-style: none;
 }
 
-.image-catalog img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.image-monopod {
   margin-top: 41px;
 }
 
@@ -500,6 +460,15 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+  text-align: left;
+  color: rgb(0, 0, 0);
 }
 
 .text-catalog li {
@@ -510,7 +479,8 @@ body {
 
 .services {
   margin-top: 180px;
-  height: 320px;
+  margin-bottom: 95px;
+  height: 288px;
   color: rgb(0, 0, 0);
   background-color: rgb(229, 229, 229);
 }
@@ -522,9 +492,15 @@ body {
 }
 
 .services h3 {
+  padding-top: 8px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.02;
+  letter-spacing: 0.02em;
+  text-align: left;
   color: rgb(0, 0, 0);
 }
 
@@ -539,20 +515,41 @@ body {
   list-style: none;
 }
 
+.services-menu li:active {
+  display: block;
+  position: relative;
+  width: 280px;
+  height: 40px;
+  margin: -15px -120px 40px 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  list-style: none;
+}
+
+.services-menu a:active {
+  display: block;
+  position: absolute;
+  top: 17px;
+  left: 19px;
+  color: rgb(247, 225, 132);
+}
+
 .services-menu {
   box-sizing: border-box;
-  height: 319px;
-  margin-left: -40px;
-  padding-top: 80px;
-  margin-top: -100px;
+  margin: -100px 0 -62px -40px;
+  padding: 80px 117px 0 0;
   border-right: 7px solid rgb(0, 0, 0);
-  padding-right: 117px;
+}
+
+.services-menu .back-yellow {
+  width: 160px;
 }
 
 .services p {
+  margin-top: -16px;
   font-family: 'Open Sans', sans-serif;
   line-height: 2;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.016em;
   font-size: 15px;
   font-weight: 300;
   color: rgb(70, 70, 70);
@@ -567,22 +564,23 @@ body {
 }
 
 .services-description img {
-  padding-top: 63px;
+  padding-top: 66px;
   padding-left: 132px;
 }
 
 /* Нащи партнёры */
 
 .partners {
+  display: block;
   width: 1160px;
   margin: 0 auto;
-  margin-top: 94px;
-  margin-bottom: 152px;
+  margin-bottom: 142px;
 }
 
 .partners ul {
   display: flex;
   justify-content: space-between;
+  padding-left: 0px;
 }
 
 .partners li {
@@ -625,32 +623,55 @@ body {
 
 .info {
   display: block;
+  position: relative;
   margin-right: 140px;
   width: 460px;
 }
 
+.info::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 7px;
+  top: -53px;
+  left: 0px;
+  background-color: rgb(0, 0, 0);
+}
+
 .info h2 {
+  margin: 0 auto;
+  margin-left: -2px;
+  padding-bottom: 44px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.02;
+  letter-spacing: 0.007em;
+  text-align: left;
   color: rgb(0, 0, 0);
-  margin: 0 auto;
-  padding-bottom: 59px;
 }
 
 .info p {
-  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  width: 480px;
+  font-family: 'OpenSans', Arial, sans-serif;
   font-size: 15px;
   font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
   color: rgb(70, 70, 70);
-  width: 462px;
-  display: inline-block;
-  margin: 0 auto;
-  padding-bottom: 34px;
 }
 
 .info ul {
-  padding-top: 15px;
+  margin-left: -5px;
+  padding-top: 19px;
 }
 
 .info li {
@@ -658,6 +679,7 @@ body {
   font-size: 16px;
   font-weight: 800;
   line-height: 2.5;
+  letter-spacing: 0.007em;
   color: rgb(0, 0, 0);
   list-style-type: circle;
   list-style: none
@@ -668,13 +690,20 @@ body {
 }
 
 .info .back-yellow {
+  margin: 0;
+  margin-top: -12px;
+  padding: 0;
+  padding-left: 2px;
+  width: 260px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.5;
+  letter-spacing: 3.6px;
+  text-align: center;
   color: rgb(0, 0, 0);
-  width: 260px;
-  padding: 0 0;
-  line-height: 8px;
 }
 
 .info a {
@@ -685,24 +714,48 @@ body {
 
 /* Контакты */
 
+.contacts {
+  position: relative;
+}
+
+.contacts::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 7px;
+  top: -53px;
+  left: 0px;
+  background-color: rgb(0, 0, 0);
+}
+
 .contacts h2 {
+  margin: 0 auto;
+  margin-left: -3px;
+  padding-bottom: 44px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
-  padding: 0 0 60px 0;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.02;
+  letter-spacing: 0.015em;
+  text-align: left;
   color: rgb(0, 0, 0);
-  margin: 0 auto;
 }
 
 .contacts p {
-  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  padding-bottom: 38px;
+  font-family: 'OpenSans', Arial, sans-serif;
   font-size: 15px;
   font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
   color: rgb(70, 70, 70);
-  width: 511px;
-  display: inline-block;
-  margin: 0 auto;
-  padding-bottom: 44px;
 }
 
 .contacts img {
@@ -712,14 +765,20 @@ body {
 }
 
 .contacts .back-yellow {
+  margin: 0;
+  margin-top: -1px;
+  padding: 0;
+  padding-left: 2px;
+  width: 260px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.5;
+  letter-spacing: 3.6px;
+  text-align: center;
   color: rgb(0, 0, 0);
-  width: 260px;
-  margin: 0;
-  padding: 0;
-  line-height: 8px;
 }
 
 .contacts a {
@@ -732,17 +791,13 @@ body {
 
 .footer {
   background-color: rgb(70, 70, 70);
-  margin: 100px 0px 0px 0px;
-  padding: 62px 0px 65px 0px;
+  margin-top: 100px;
+  padding: 63px 0px 65px 0px;
 }
 
 .background-footer {
   width: 1160px;
   margin: 0 auto;
-}
-
-.menu-user img {
-  display: inline-block;
 }
 
 .menu-user img:hover {
@@ -757,13 +812,19 @@ body {
   display: flex;
   justify-content: space-between;
   height: 35px;
+}
 
+.menu-user ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  width: 325px;
 }
 
 .menu-user li:first-child::before {
   content: '';
   background: url('../img/user.png') no-repeat left center;
-  padding: 10px 0 10px 20px;
+  padding: 15px 0 14px 25px;
 }
 
 .menu-user li:nth-of-type(2)::before {
@@ -775,15 +836,7 @@ body {
 .menu-user li:last-child::before {
   content: '';
   background: url('../img/cart.png') no-repeat left center;
-  padding: 10px 0 10px 20px;
-}
-
-.menu-user ul {
-  display: flex;
-  justify-content: space-between;
-  width: 312px;
-  height: 50%;
-  margin: 10px 0px 0px 0px;
+  padding: 11px 0 10px 25px;
 }
 
 .menu-user a {
@@ -807,28 +860,38 @@ body {
 .address-nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 31px;
   height: 15px;
 }
 
 .address-nav p {
-  display: inline-block;
-  margin: 0;
-  height: 50%;
-  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .address-nav ul {
   display: flex;
   justify-content: space-between;
-  width: 500px;
+  width: 427px;
+  margin-left: -76px;
+  margin-top: 6px;
   text-transform: uppercase;
-  letter-spacing: 3.6px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
-  margin: -4px 0px 0px 0px;
-  padding: 0;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
 }
 
 .address-nav li:hover {
@@ -850,15 +913,17 @@ body {
   text-align: center;
   height: 32px;
   margin: 0;
-  padding: 70px 0px 0px 0px;
+  padding: 78px 0px 0px 0px;
   vertical-align: middle
 }
 
 .social ul {
   display: flex;
   justify-content: space-between;
-  padding: 0;
   margin: 0;
+  margin-left: -54px;
+  padding: 0;
+
 }
 
 .empty {

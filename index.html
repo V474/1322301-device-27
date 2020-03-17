@@ -20,9 +20,9 @@
                 <button type="submit">Найти</button>
               </form>
             </li>
-            <li><a href="#"><img src="./img/user.svg" alt="Иконка входа"> Войти</a></li>
-            <li><a href="#"><img src="./img/compare.svg" alt="Иконка сравнения"> Сравнить</a></li>
-            <li><a href="#"><img src="./img/cart.svg" alt="Иконка корзины"> Корзина</a></li>
+            <li><a href="#">Войти</a></li>
+            <li><a href="#">Сравнить</a></li>
+            <li><a href="#">Корзина</a></li>
           </ul>
         </div>  
         <div class="nav-services">
@@ -47,9 +47,8 @@
     </header>
     <main>
       <h1 class="visually-hidden">Интернет магазин "Девайс"</h1>
-      <section class="wrapper">
-      <div class="slider">
-        <div class="slider__item filter">
+      <section class="slider">
+        <div class="slide">
           <div class="slide-image">
             <img src="./img/monopod.png" alt="Фото палки для селфи">
           </div>
@@ -81,7 +80,7 @@
               </table>
             </div>
           </div>
-        <div class="slider__item filter">
+<!--         <div class="slide">
           <div class="slide-image">
             <img src="./img/bracelet.png" alt="Фото фитнес браслета">
           </div>
@@ -109,7 +108,7 @@
             </table>
           </div>
         </div>
-        <div class="slider__item filter">
+        <div class="slide">
           <div class="slide-image">
             <img src="./img/quadrocopter.png" alt="Фото квадрокоптера">
           </div>
@@ -138,20 +137,13 @@
               </tr>
             </table>
           </div>
-        </div>
-      </div>
-      <!-- Подключаем jQuery -->
-			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-			<!-- Подключаем слайдер Slick -->
-			<script src="js/slick.min.js"></script>
-			<!-- Подключаем файл скриптов -->
-			<script src="js/script.js"></script>
+        </div> -->
       </section> 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="image-catalog">
           <li class="image-item"><img width="97" height="55" alt="Картинка VR очков" src="./img/vr.svg"></li>
-          <li class="image-item"><img width="86" height="117" alt="Картинка монопода" src="./img/monopod.svg"></li>
+          <li class="image-item"><img class="image-monopod" width="86" height="117" alt="Картинка монопода" src="./img/monopod.svg"></li>
           <li class="image-item"><img width="71" height="87" alt="Картинка Action камеры" src="./img/action-camera.svg"></li>
           <li class="image-item"><img width="107" height="65" alt="Картинка фитнес браслета" src="./img/fitness-brace.svg"></li>
           <li class="image-item"><img width="56" height="98" alt="Картинка смарт часов" src="./img/smart-whatch.svg"></li>
@@ -159,7 +151,7 @@
         </ul>
         <ul class="text-catalog">
           <li class="product"><a href="#">Виртуальная реальность</a></li>
-          <li class="product"><a href="#">Моноподы для селфи</a></li>
+          <li class="product"><a href="#">Моноподы <br> для селфи</a></li>
           <li class="product"><a href="#">Экшн-камеры</a></li>
           <li class="product"><a href="#">Фитнес-браслеты</a></li>
           <li class="product"><a href="#">Умные часы</a></li>
@@ -215,8 +207,8 @@
       <div class="info-contacts">
       <section class="info">
         <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <p>Огромный выбор гаджетов не оставит равнодушным гика, <br> который есть в каждом из нас.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки <br> России! DEVICE работает со многими транспортными компаниями:</p>
         <ul>
           <li>Деловые Линии</li>
           <li>Автотрейдинг</li>
@@ -267,7 +259,7 @@
       </div>
       </div>
     </footer>
-    <form class="user" method="post" action="https://echo.htmlacademy.ru">
+<!--     <form class="user" method="post" action="https://echo.htmlacademy.ru">
       <label for="user-name">Ваше имя:</label>
         <input id="user-name" type="text" name="name" placeholder="Имя Фамилия" required>
       <label for="user-email">Ваш e-mail:</label>
@@ -275,6 +267,6 @@
       <label for="user-text">Текст письма:</label>
         <textarea id="user-text" name="text" placeholder="В свободной форме" required></textarea>
       <button class="back-yellow" type="submit">Отправить</button>
-    </form>
+    </form> -->
   </body>
 </html>
