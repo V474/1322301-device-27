@@ -300,25 +300,27 @@ body {
 }
 
 .slide p {
-  margin-bottom: 67px;
+  margin-bottom: 66px;
   width: 480px;
   height: 46px;
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'OpenSans', Arial, sans-serif;
   font-size: 15px;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 2;
-  letter-spacing: 0.15px;
   text-align: left;
   color: rgb(70, 70, 70);
 }
 
-.slide .back-yellow {
+.slide-shifter .back-yellow {
   margin-bottom: 64px;
 }
 
-.slide a:active {
+.slide-shifter a {
+  margin-top: 6px;
+  margin-left: 2px;
+}
+
+.slide-shifter a:active {
   opacity: 0.3;
 }
 
@@ -375,17 +377,22 @@ body {
   opacity: 1;
 }
 
+.feature {
+  display: block;
+  margin-left: -3px;
+}
+
 .feature th:first-child {
   width: 82px;
-  padding-right: 72px;
+  padding-right: 73px;
 }
 
 .feature th:nth-child(2) {
   width: 63px;
-  padding-right: 73px;
+  padding-right: 74px;
 }
 
-.feature td:first-child {
+.feature td {
   padding-top: 6px;
 }
 
@@ -675,6 +682,7 @@ body {
 }
 
 .info li {
+  position: relative;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -683,6 +691,17 @@ body {
   color: rgb(0, 0, 0);
   list-style-type: circle;
   list-style: none
+}
+
+.info li::before {
+  position: absolute;
+  content: '';
+  top: 16px;
+  left: -34px;
+  width: 4px;
+  height: 4px;
+  border: 2px solid rgb(229, 229, 229);
+  border-radius: 50%;
 }
 
 .info li:last-of-type {
@@ -817,7 +836,7 @@ body {
 .menu-user ul {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 0px;
   width: 325px;
 }
 
@@ -827,10 +846,18 @@ body {
   padding: 15px 0 14px 25px;
 }
 
+.menu-user li:first-child:hover::before {
+  opacity: 0.6;
+}
+
 .menu-user li:nth-of-type(2)::before {
   content: '';
   background: url('../img/compare.png') no-repeat left center;
   padding: 10px 0 10px 20px;
+}
+
+.menu-user li:nth-of-type(2):hover::before {
+  opacity: 0.6;
 }
 
 .menu-user li:last-child::before {
@@ -839,22 +866,32 @@ body {
   padding: 11px 0 10px 25px;
 }
 
+.menu-user li:last-child:hover::before {
+  opacity: 0.6;
+}
+
 .menu-user a {
   display: inline-block;
-  color: rgba(255, 255, 255, 0.7);
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
   text-decoration: none;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.menu-user li {
-  opacity: 0.7;
-}
-
-.menu-user li:hover {
+.menu-user a:hover {
   opacity: 1;
+  color: rgb(255, 255, 255);
 }
 
 .menu-user li:active {
   opacity: 0.3;
+  list-style: none;
 }
 
 .address-nav {
