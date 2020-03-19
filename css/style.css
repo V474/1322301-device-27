@@ -40,8 +40,9 @@
 
 body {
   margin: 0px auto;
-  padding-top: 20px;
+  padding-top: 21px;
   color: rgb(70, 70, 70);
+  white-space: nowrap
 }
 
 .visually-hidden {
@@ -134,6 +135,10 @@ body {
 
 .nav-user li:nth-child(2) {
   padding-right: 217px;
+}
+
+.nav-username li:nth-child(2) {
+  padding-right: 125px;
 }
 
 .nav-user li:nth-child(3) {
@@ -242,7 +247,7 @@ body {
 .slide {
   display: flex;
   justify-content: space-between;
-  width: 990px;
+  width: 989px;
   margin: 0 auto;
   margin-top: -112px;
   padding-left: 10px;
@@ -283,11 +288,9 @@ body {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.19;
-  letter-spacing: 0.47px;
-  text-align: left;
+  line-height: 1.191;
+  letter-spacing: 0.022em;
+  word-spacing: -0.05em;
   color: rgb(0, 0, 0);
 }
 
@@ -656,7 +659,8 @@ body {
   font-stretch: normal;
   font-style: normal;
   line-height: 1.02;
-  letter-spacing: 0.007em;
+  word-spacing: -0.03em;
+  letter-spacing: 0.02em;
   text-align: left;
   color: rgb(0, 0, 0);
 }
@@ -671,9 +675,13 @@ body {
   font-stretch: normal;
   font-style: normal;
   line-height: 2;
-  letter-spacing: normal;
+  letter-spacing: 0.02em;
   text-align: left;
   color: rgb(70, 70, 70);
+}
+
+.info p:nth-child(3) {
+  letter-spacing: -0.01em;
 }
 
 .info ul {
@@ -758,7 +766,7 @@ body {
   font-stretch: normal;
   font-style: normal;
   line-height: 1.02;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.016em;
   text-align: left;
   color: rgb(0, 0, 0);
 }
@@ -836,8 +844,8 @@ body {
 .menu-user ul {
   display: flex;
   justify-content: space-between;
-  margin-top: 0px;
-  width: 325px;
+  margin-top: -1px;
+  width: 478px;
 }
 
 .menu-user li:first-child::before {
@@ -868,6 +876,10 @@ body {
 
 .menu-user li:last-child:hover::before {
   opacity: 0.6;
+}
+
+.footer-username li:first-child {
+  padding-right: 70px;
 }
 
 .menu-user a {
@@ -1035,28 +1047,33 @@ body {
 
 .catalogs-name {
   display: block;
-  width: 1160px;
+  width: 1040px;
   margin: 0 auto;
+  margin-top: -107px;
 }
 
 .catalogs-name h1 {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.02;
+  letter-spacing: 0.47px;
+  text-align: left;
   color: rgb(0, 0, 0);
 }
 
 .nav-way ul {
   display: flex;
-  width: 1160px;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  width: 1040px;
+  margin: -6px auto 47px auto;
   padding: 0;
 }
 
 .nav-way li {
   list-style: none;
-  padding-right: 20px;
+  padding-right: 18px;
 }
 
 .nav-way li::after {
@@ -1083,15 +1100,14 @@ body {
 .catalog-monopods {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  margin-top: -60px;
+  margin: -60px auto -26px auto;
   width: 1160px;
 }
 
 /* Фильтр | catalog */
 
 .catalog-filter {
-  padding: 0 60px;
+  padding: 0 67px 0 60px;
   background-color: rgb(235, 235, 235);
 }
 
@@ -1104,20 +1120,25 @@ body {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
-  letter-spacing: 3.2px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.24em;
+  text-align: left;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
 }
 
 .cost {
   display: block;
-  margin-top: 75px;
+  margin-top: 92px;
   height: 138px;
   border-top: 2px solid rgb(0, 0, 0);
   border-bottom: 2px solid rgb(0, 0, 0);
 }
 
-.cost label {
+.cost p:first-child {
+  margin-top: 11px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -1126,20 +1147,20 @@ body {
   color: rgb(0, 0, 0);
 }
 
-.cost input {
-  margin-top: 30px;
+.cost p:last-child {
+  margin-top: 26px;
 }
 
 /* Фильтр цвета */
 
 .color {
   display: block;
-  height: 283px;
+  height: 272px;
   border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .color h3 {
-  padding-bottom: 15px;
+  margin: 11px 0 33px 0;
   width: 41px;
   height: 15px;
   font-family: 'Gilroy', Arial, sans-serif;
@@ -1159,6 +1180,7 @@ body {
 }
 
 .color li {
+  padding-bottom: 13px;
   list-style: none;
 }
 
@@ -1208,8 +1230,13 @@ body {
   opacity: 1;
 }
 
+.bluetooth {
+  display: block;
+  height: 140px;
+}
+
 .bluetooth h3 {
-  height: 13px;
+  margin: 11px 0 24px 0;
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -1224,12 +1251,16 @@ body {
 .bluetooth ul {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
 }
 
 .bluetooth li {
   list-style: none;
-  padding-bottom: 16px;
+  padding-bottom: 12px;
+}
+
+.bluetooth .back-yellow {
+  margin-top: 39px;
+  width: 200px;
 }
 
 .bluetooth-radio {
@@ -1286,6 +1317,7 @@ padding-left: 30px;
 }
 
 .sort h3 {
+  padding-left: 5px;
   text-transform: uppercase;
   font-family: 'Gilroy', Arial, sans-serif;
   font-weight: 800;
@@ -1297,18 +1329,23 @@ padding-left: 30px;
 .sort ul {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
-.sort li:not(:first-child) {
-  margin-left: 30px;
-}
-
-.sort li:last-child {
-  margin-left: 20px;
+.sort ul:first-child {
+  margin-left: 175px;
 }
 
 .sort li {
   list-style: none;
+}
+
+.sort li:nth-child(3) {
+  padding-left: 30px;
+}
+
+.sort li:nth-child(2) {
+  padding-left: 30px;
 }
 
 .sort a {
@@ -1324,6 +1361,14 @@ padding-left: 30px;
 
 .sort a:active {
   color: rgba(0, 0, 0);
+}
+
+.sort-updown li {
+  padding: 0;
+}
+
+.sort-updown li:last-child {
+  padding-left: 19px;
 }
 
 .sort-updown img {
@@ -1350,17 +1395,18 @@ padding-left: 30px;
   justify-content: space-between;
   width: 760px;
   padding: 0;
-  margin: 70px auto 40px auto;
+  margin: 76px auto 40px auto;
 }
 
 .catalog-item {
   display: block;
   width: 360px;
-  margin-bottom: 50px;
+  margin-bottom: 62px;
 }
 
 .catalog-image {
-  margin-bottom: 28px;
+  margin-bottom: 14px;
+  margin-left: 3px;
 }
 
 .description-good a {
@@ -1369,6 +1415,7 @@ padding-left: 30px;
 }
 
 .description-good h2 {
+  margin-left: 3px;
   width: 265px;
   height: 16px;
   font-family: 'Gilroy', Arial, sans-serif;
@@ -1406,22 +1453,26 @@ padding-left: 30px;
 
 .nav-bottom {
   background-color: rgb(235, 235, 235);
-  margin: 0 auto;
+  margin: -54px auto 0 auto;
   max-width: 700px;
   max-height: 70px;
   padding: 30px;
 }
 
+.nav-bottom-content ul {
+  margin: 0 auto;
+}
+
 .nav-bottom-content {
   display: flex;
   justify-content: space-between;
-  margin: 0;
+  margin: 0 -5px 0 3px;
   padding: 0;
   list-style: none;
 }
 
 .nav-bottom-content li:first-child {
-  margin-right: 200px;
+  margin-right: 210px;
 }
 
 .nav-bottom-content li:last-child {

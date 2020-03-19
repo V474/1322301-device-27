@@ -12,7 +12,7 @@
         <a href="./index.html"><img src="./img/device.png" width="163" height="35" alt="Логотип"/></a>
       </div>
       <nav class="nav">
-        <div class="nav-user">
+        <div class="nav-user nav-username">
           <ul>
             <li>
               <form action="https://echo.htmlacademy.ru" method="get">
@@ -20,14 +20,14 @@
                 <button type="submit">Найти</button>
               </form>
             </li>
-            <li><a href="#"><img src="./img/user.svg" alt="Иконка входа"> Войти</a></li>
-            <li><a href="#"><img src="./img/compare.svg" alt="Иконка сравнения"> Сравнить</a></li>
-            <li><a href="#"><img src="./img/cart.svg" alt="Иконка корзины"> Корзина</a></li>
+            <li><a href="#">Валентин Петухов</a></li>
+            <li><a href="#">Сравнить</a></li>
+            <li><a href="#">Корзина</a></li>
           </ul>
         </div>  
         <div class="nav-services">
           <ul>
-            <li><a href="./catalog.html">Каталог товаров <img src="./img/plus.png" alt="Иконка знака плюс"></a></li>
+            <li><a href="#">Каталог товаров <img src="./img/plus.png" alt="Иконка знака плюс"></a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Гарантия</a></li>
             <li><a href="#">Контакты</a></li>
@@ -36,7 +36,7 @@
         <div class="nav-subcatalog">
           <ul>
             <li><a href="#">Виртуальная реальность</a></li>
-            <li><a>Моноподы для селфи</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
             <li><a href="#">Фитнес-браслеты</a></li>
             <li><a href="#">Умные часы</a></li>
@@ -65,9 +65,8 @@
           <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
             <div class="filter">
               <div class="cost">
-                <p><label for="price">Стоимость</label>
-                  <input type="range" id="price" name="price" min="1" max="10000" step="1">
-                </p>
+                <p><label for="price">Стоимость</label></p>
+                <p><input type="range" id="price" name="price" min="1" max="10000" step="1"></p>
                 </div>
               <div class="color">
                 <h3>Цвет</h3>
@@ -104,10 +103,10 @@
                     <span class="custom-bluetooth"></span></label>
                     <span class="text-checkbox">Нет</span></li>
                 </ul>
+                <button class="filter-show back-yellow" type="submit">
+                  <span>Показать</span>
+                </button>
               </div>
-              <button class="filter-show back-yellow" type="submit">
-                <span>Показать</span>
-              </button>
             </div>
           </form>
         </aside>
@@ -148,7 +147,7 @@
                 />
               </div>
               <div class="description-good">
-                <h2><a href="#">Профессиональная селфи-палка</a></h2>
+                <h2><a href="#">Профессиональная <br> селфи-палка</a></h2>
                 <span>1 500 руб.</span>
               </div>
             </article>
@@ -172,7 +171,7 @@
                 />
               </div>
               <div class="description-good">
-                <h2><a href="#">Селфи-палка «Следуй за мной»</a></h2>
+                <h2><a href="#">Селфи-палка «Следуй за <br> мной»</a></h2>
                 <span>4 900 руб.</span>
               </div>
             </article>
@@ -191,12 +190,11 @@
       </div>
     </main>
     <footer class="footer">
-    <div class="background-footer">
-      <div class="menu-user">
-        <a href="./index.html">
-          <img src="./img/device-footer.png" width="163" height="35" alt="Логотип магазина Device"/></a>
+      <div class="background-footer">
+      <div class="menu-user footer-username">
+        <a><img src="./img/device-footer.png" width="163" height="35" alt="Логотип магазина Device"/></a>
         <ul>
-          <li><a href="#">Войти</a></li>
+          <li><a href="#">Валентин Петухов</a></li>
           <li><a href="#">Сравнить</a></li>
           <li><a href="#">Корзина</a></li>
         </ul>
@@ -214,16 +212,15 @@
         <div class="empty"></div>
         <p class="visually-hidden">Социальные сети</p>
         <ul>
-          <li><a href="#"><img src="./img/facebook.svg" width="32" height="32" alt="Логотип Facbook"/></a></li>
-          <li><a href="#"><img src="./img/instagram.svg" width="32" height="32" alt="Логотип Instagram"/></a></li>
-          <li><a href="#"><img src="./img/twitter.svg" width="32" height="32" alt="Логотип Twitter"/></a></li>
+          <li><a href="#"><img src="./img/facebook.svg" width="32" height="32" alt="Логотип Facbook"></a></li>
+          <li><a href="#"><img src="./img/instagram.svg" width="32" height="32" alt="Логотип Instagram"></a></li>
+          <li><a href="#"><img src="./img/twitter.svg" width="32" height="32" alt="Логотип Twitter"></a></li>
         </ul>
         <div class="academy">
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="./img/logo-htmlacademy.png" width="27" height="35" alt="HTML Academy"/></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="./img/logo-htmlacademy.png" width="27" height="35" alt="HTML Academy"></a>
         </div>
       </div>
-    </div>
+      </div>
     </footer>
   </body>
 </html>
